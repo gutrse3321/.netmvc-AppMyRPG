@@ -1,0 +1,25 @@
+﻿@model AppMyRPG.Models.UserInfo
+<div class="user-item">
+    <div class="user-imgbox">
+        <img src="@Model.UserFace" />
+    </div>
+    <div class="user-info">
+        <div class="user-info-tt">
+            <span>@Model.UserNickname</span>
+            <span><i class="fa fa-group"></i>&nbsp;@Model.UserGroup.GroupName</span>
+            <span><i class="fa fa-address-card-o"></i>&nbsp;@Model.UserUID</span>
+        </div>
+        <div class="user-info-cont">
+            <i class="fa fa-envelope-o"></i>&nbsp;@Model.UserEmail&emsp;@Html.Label(Model.UserRegState==1?"已验证":"未验证", new { @class = Model.UserRegState == 1 ? "my-success" : "my-down" })
+        </div>
+        <div class="user-info-time">
+            @Model.UserRegTime
+        </div>
+    </div>
+    <div class="user-control">
+        <div class="user-operate">
+            <a class="game-operate" href="@Url.Action("Edit",new { userid = Model.UserID})"><i class="fa fa-edit"></i>&nbsp;修改</a>
+            <a class="game-operate deleteBox" onclick="return confirm('是否删除');" href="@Url.Action("Delete",new { userid=Model.UserID})"><i class="fa fa-trash"></i>&nbsp;删除</a>
+        </div>
+    </div>
+</div>

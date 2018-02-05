@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_MyRPGModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="CommentID" />
+    </Key>
+    <Property Name="CommentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CommentText" Type="String" MaxLength="600" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CommentTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="GameID" Type="Int32" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Games" Relationship="Self.FK_GameID_COMMENT" FromRole="Comment" ToRole="Games" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK_UserID_COMMENT" FromRole="Comment" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="Games">
+    <Key>
+      <PropertyRef Name="GameID" />
+    </Key>
+    <Property Name="GameID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GameName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GameTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="GameDec" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GameFace" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="GameCmtCount" Type="Int32" />
+    <Property Name="GameHot" Type="Int32" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="TypeID" Type="Int32" />
+    <Property Name="LinkID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Comment" Relationship="Self.FK_GameID_COMMENT" FromRole="Games" ToRole="Comment" />
+    <NavigationProperty Name="Link" Relationship="Self.FK__Games__LinkID__3C69FB99" FromRole="Games" ToRole="Link" />
+    <NavigationProperty Name="GameType" Relationship="Self.FK__Games__TypeID__3B75D760" FromRole="Games" ToRole="GameType" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK__Games__UserID__3A81B327" FromRole="Games" ToRole="UserInfo" />
+    <Property Name="GameImg1" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="GameImg2" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="GameImg3" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="GameType">
+    <Key>
+      <PropertyRef Name="TypeID" />
+    </Key>
+    <Property Name="TypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TypeClass" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Games" Relationship="Self.FK__Games__TypeID__3B75D760" FromRole="GameType" ToRole="Games" />
+    <Property Name="OIID" Type="Int32" />
+    <NavigationProperty Name="OutIn" Relationship="DB_MyRPGModel.FK__GameType__OIID__02FC7413" FromRole="GameType" ToRole="OutIn" />
+  </EntityType>
+  <EntityType Name="Link">
+    <Key>
+      <PropertyRef Name="LinkID" />
+    </Key>
+    <Property Name="LinkID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LinkURL" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LinkPWD" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="LinkDec" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Games" Relationship="Self.FK__Games__LinkID__3C69FB99" FromRole="Link" ToRole="Games" />
+  </EntityType>
+  <EntityType Name="Notice">
+    <Key>
+      <PropertyRef Name="NoticeID" />
+    </Key>
+    <Property Name="NoticeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NoticeContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NoticeTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserID" Type="Int32" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK__Notice__UserID__33D4B598" FromRole="Notice" ToRole="UserInfo" />
+    <Property Name="NoticeTitle" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UserGroup">
+    <Key>
+      <PropertyRef Name="GroupID" />
+    </Key>
+    <Property Name="GroupID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupName" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GroupDec" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK_GroupID_USERINFO" FromRole="UserGroup" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserUID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserPWD" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserNickname" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="UserEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserRegState" Type="Int32" Nullable="false" />
+    <Property Name="GroupID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Comment" Relationship="Self.FK_UserID_COMMENT" FromRole="UserInfo" ToRole="Comment" />
+    <NavigationProperty Name="Games" Relationship="Self.FK__Games__UserID__3A81B327" FromRole="UserInfo" ToRole="Games" />
+    <NavigationProperty Name="Notice" Relationship="Self.FK__Notice__UserID__33D4B598" FromRole="UserInfo" ToRole="Notice" />
+    <NavigationProperty Name="UserGroup" Relationship="Self.FK_GroupID_USERINFO" FromRole="UserInfo" ToRole="UserGroup" />
+    <Property Name="UserFace" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UserRegTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <Association Name="FK_GameID_COMMENT">
+    <End Role="Games" Type="Self.Games" Multiplicity="0..1" />
+    <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Games">
+        <PropertyRef Name="GameID" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="GameID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserID_COMMENT">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+    <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Games__LinkID__3C69FB99">
+    <End Role="Link" Type="Self.Link" Multiplicity="0..1" />
+    <End Role="Games" Type="Self.Games" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Link">
+        <PropertyRef Name="LinkID" />
+      </Principal>
+      <Dependent Role="Games">
+        <PropertyRef Name="LinkID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Games__TypeID__3B75D760">
+    <End Role="GameType" Type="Self.GameType" Multiplicity="0..1" />
+    <End Role="Games" Type="Self.Games" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GameType">
+        <PropertyRef Name="TypeID" />
+      </Principal>
+      <Dependent Role="Games">
+        <PropertyRef Name="TypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Games__UserID__3A81B327">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="0..1" />
+    <End Role="Games" Type="Self.Games" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Games">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Notice__UserID__33D4B598">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="0..1" />
+    <End Role="Notice" Type="Self.Notice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Notice">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupID_USERINFO">
+    <End Role="UserGroup" Type="Self.UserGroup" Multiplicity="1" />
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserGroup">
+        <PropertyRef Name="GroupID" />
+      </Principal>
+      <Dependent Role="UserInfo">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_MyRPGEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Comment" EntityType="Self.Comment" />
+    <EntitySet Name="Games" EntityType="Self.Games" />
+    <EntitySet Name="GameType" EntityType="Self.GameType" />
+    <EntitySet Name="Link" EntityType="Self.Link" />
+    <EntitySet Name="Notice" EntityType="Self.Notice" />
+    <EntitySet Name="UserGroup" EntityType="Self.UserGroup" />
+    <EntitySet Name="UserInfo" EntityType="Self.UserInfo" />
+    <AssociationSet Name="FK_GameID_COMMENT" Association="Self.FK_GameID_COMMENT">
+      <End Role="Games" EntitySet="Games" />
+      <End Role="Comment" EntitySet="Comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserID_COMMENT" Association="Self.FK_UserID_COMMENT">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="Comment" EntitySet="Comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Games__LinkID__3C69FB99" Association="Self.FK__Games__LinkID__3C69FB99">
+      <End Role="Link" EntitySet="Link" />
+      <End Role="Games" EntitySet="Games" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Games__TypeID__3B75D760" Association="Self.FK__Games__TypeID__3B75D760">
+      <End Role="GameType" EntitySet="GameType" />
+      <End Role="Games" EntitySet="Games" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Games__UserID__3A81B327" Association="Self.FK__Games__UserID__3A81B327">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="Games" EntitySet="Games" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Notice__UserID__33D4B598" Association="Self.FK__Notice__UserID__33D4B598">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="Notice" EntitySet="Notice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupID_USERINFO" Association="Self.FK_GroupID_USERINFO">
+      <End Role="UserGroup" EntitySet="UserGroup" />
+      <End Role="UserInfo" EntitySet="UserInfo" />
+    </AssociationSet>
+    <EntitySet Name="FriendLink" EntityType="DB_MyRPGModel.FriendLink" />
+    <EntitySet Name="OutIn" EntityType="DB_MyRPGModel.OutIn" />
+    <AssociationSet Name="FK__GameType__OIID__02FC7413" Association="DB_MyRPGModel.FK__GameType__OIID__02FC7413">
+      <End Role="OutIn" EntitySet="OutIn" />
+      <End Role="GameType" EntitySet="GameType" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="FriendLink">
+    <Key>
+      <PropertyRef Name="FLID" />
+    </Key>
+    <Property Name="FLID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FLUrl" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OutIn">
+    <Key>
+      <PropertyRef Name="OIID" />
+    </Key>
+    <Property Name="OIID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OIName" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="GameType" Relationship="DB_MyRPGModel.FK__GameType__OIID__02FC7413" FromRole="OutIn" ToRole="GameType" />
+  </EntityType>
+  <Association Name="FK__GameType__OIID__02FC7413">
+    <End Type="DB_MyRPGModel.OutIn" Role="OutIn" Multiplicity="0..1" />
+    <End Type="DB_MyRPGModel.GameType" Role="GameType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OutIn">
+        <PropertyRef Name="OIID" />
+      </Principal>
+      <Dependent Role="GameType">
+        <PropertyRef Name="OIID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

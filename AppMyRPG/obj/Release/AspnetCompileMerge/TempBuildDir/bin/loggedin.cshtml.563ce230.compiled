@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="2" virtualPath="/Views/UserInfo/LoggedIn.cshtml" hash="ffffffffcf6b0aaf" filehash="41cb9339a8b6" flags="110000" assembly="App_Web_pstse00a" type="ASP._Page_Views_UserInfo_LoggedIn_cshtml">
+    <filedeps>
+        <filedep name="/Views/UserInfo/LoggedIn.cshtml" />
+    </filedeps>
+</preserve>

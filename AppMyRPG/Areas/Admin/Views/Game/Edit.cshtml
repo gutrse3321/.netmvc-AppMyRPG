@@ -1,0 +1,69 @@
+﻿@model AppMyRPG.Models.Games
+@{
+    ViewBag.Title = "修改游戏";
+    ViewBag.NavIndex = 1;
+}
+<div class="game-edit-panel">
+    <div class="game-edit-well">
+        @using (Html.BeginForm("Edit","Game",FormMethod.Post,new { enctype = "multipart/form-data"}))
+        {
+            @Html.HiddenFor(m=>m.GameID)
+            <div class="gedit-imgtitle">
+                <div id="gedit-face">
+                    <img class="gedit-img" src="@Model.GameFace" />
+                    <a class="gedit-file">修改封面</a>
+                    <input type="file" id="GameFace" name="GameFace" accept="image/png,image/jpeg" />
+                </div>
+                <div id="gedit-gname">
+                    @Html.TextBoxFor(m=>m.GameName,new { @class="my-textbox gname-textbox",placeholder="输入游戏名称", maxlength="80"})
+                </div>
+            </div>
+            <div class="gedit-main">
+                <div class="gedit-screenshot">
+                    <span>游戏截图</span>
+                    <div class="screenshot-item">
+                        <div class="screensot-aimg">
+                            <img class="gedit-shot" src="@Model.GameImg1" />
+                            <a class="gedit-file-img">修改截图</a>
+                            <input type="file" id="GameImg1" class="GameShot" name="GameImg" accept="image/png,image/jpeg" />
+                        </div>
+                        <div class="screensot-aimg">
+                            <img class="gedit-shot" src="@Model.GameImg2" />
+                            <a class="gedit-file-img">修改截图</a>
+                            <input type="file" id="GameImg2" class="GameShot" name="GameImg" accept="image/png,image/jpeg" />
+                        </div>
+                        <div class="screensot-aimg">
+                            <img class="gedit-shot" src="@Model.GameImg3" />
+                            <a class="gedit-file-img">修改截图</a>
+                            <input type="file" id="GameImg3" class="GameShot" name="GameImg" accept="image/png,image/jpeg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="gedit-content-well">
+                    <div class="gedit-cleft">
+                        分类：
+                        @Html.DropDownListFor(m => m.TypeID, ViewBag.selList as IEnumerable<SelectListItem>, new { @class = "my-DropDown" })
+                    </div>
+                    <div class="gedit-cright">
+                        <div class="gedit-cright-item">
+                            链接：
+                            @Html.TextBoxFor(m => m.Link.LinkURL, new { @class = "my-textbox glink-textbox", placeholder = "输入链接地址" })
+                        </div>
+                        <div class="gedit-cright-item">
+                            链接密码：
+                            @Html.TextBoxFor(m => m.Link.LinkPWD, new { @class = "my-textbox glink-pwd-textbox", placeholder = "输入链接地址", maxlength = "4" })
+                        </div>
+                        <div class="gedit-cright-item">
+                            简介：
+                            @Html.TextAreaFor(m => m.GameDec, new { @class = "gdec-textarea" })
+                        </div>
+                    </div>
+                </div>
+                <div class="game-submit-well">
+                    @Html.Submit("提交修改","game-submit gedit-submit")<div class="btnNo" onclick="window.history.back();">取消返回</div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

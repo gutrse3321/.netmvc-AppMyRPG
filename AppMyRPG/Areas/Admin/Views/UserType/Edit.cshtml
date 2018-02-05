@@ -1,0 +1,31 @@
+﻿@model AppMyRPG.Models.UserGroup
+@{
+    ViewBag.Title = "修改用户类型";
+    ViewBag.NavIndex = 4;
+}
+<div class="type-control-panel">
+    <div class="type-control-well">
+        @using (Html.BeginForm(FormMethod.Post))
+        {
+            @Html.HiddenFor(m=>m.GroupID)
+            <div class="form-group">
+                @Html.LabelFor(m => m.GroupName, new { @class = "control-label" })
+                @Html.TextBoxFor(m => m.GroupName, new { @class = "my-textbox type-textbox", maxlength = "4" })<br />
+                <span>@Html.ValidationMessageFor(m => m.GroupName, "", new { @class = "text-danger" })</span>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.GroupDec, new { @class = "control-label" })
+                @Html.TextBoxFor(m => m.GroupDec, new { @class = "my-textbox type-textbox", maxlength = "100" })
+            </div>
+            <div class="game-submit-well">
+                @Html.Submit("修改", "game-submit utype-submit")
+                <a href="@Url.Action("Article","UserType")" class="btnNo">取消返回</a>
+            </div>
+        }
+    </div>
+    <div class="type-control-read">
+        1.最高权限仅一人<br />
+        2.权限外泄请自查<br />
+        3.分级尽力少点
+    </div>
+</div>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="2" virtualPath="/Areas/Admin/Views/FriendLink/Add.cshtml" hash="ffffffffcf4409f5" filehash="13f53e6d3b75" flags="110000" assembly="App_Web_lwei2shp" type="ASP._Page_Areas_Admin_Views_FriendLink_Add_cshtml">
+    <filedeps>
+        <filedep name="/Areas/Admin/Views/FriendLink/Add.cshtml" />
+    </filedeps>
+</preserve>

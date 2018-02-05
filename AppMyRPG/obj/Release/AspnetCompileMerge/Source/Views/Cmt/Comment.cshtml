@@ -1,0 +1,23 @@
+﻿@model IEnumerable<AppMyRPG.Models.Comment>
+@{ Layout = null;}
+@foreach (var item in Model) {
+    <div class="game-cmt-item">
+        <div class="game-cmt-facename">
+            <div class="facename-face">
+                <a href="@Url.Action("Detail","UserInfo",new { UserID=item.UserID})" target="_blank" style="display:initial;border:none;width:auto;height:auto;">
+                    <img src="@item.UserInfo.UserFace" />
+                </a>
+            </div>
+            <span>@item.UserInfo.UserNickname</span>
+            <span><i class="fa fa-id-card"></i>&nbsp;@item.UserInfo.UserUID</span>
+        </div>
+        <div class="game-cmt-cont">
+            <div class="game-cmt-text enterAsc">
+                @item.CommentText
+            </div>
+            <div class="game-cmt-time">
+                @item.CommentTime
+            </div>
+        </div>
+    </div>
+}

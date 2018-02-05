@@ -1,0 +1,55 @@
+﻿@model AppMyRPG.Models.UserInfo
+@{ Layout = null; }
+@using (Html.BeginForm("PwdEdit", "UserInfo", FormMethod.Post)) {
+    @Html.HiddenFor(m=>m.UserID)
+    <div class="detail-control">
+        <div class="detail-edit-group">
+            密&emsp;码&emsp;@Html.PasswordFor(m=>m.UserPWD,new { @class="edit-textbox",maxlength=18,placeholder="长度为6~18"})
+        </div>
+        <div class="detail-edit-group">
+            验&emsp;证&emsp;<input type="password" name="pwd" class="edit-textbox" maxlength="18" placeholder="重复输入密码" />
+        </div>
+        <hr />
+        <div class="detail-edit-group">
+            @Html.Submit("更改", "search-btn pwd-edit")
+        </div>
+    </div>
+}
+<script>
+    $(function () {
+        //验证更改密码
+        var pwdok1 = false;   //密码
+        var pwdok2 = false;   //验证
+        $("input[name='UserPWD']").keypress(function () {
+            if ($(this).val().length < 5) {
+                $(this).css("border-color", "#f67b7b");
+                pwdok1 = false;
+            } else {
+                $(this).css("border-color", "");
+                pwdok1 = true;
+            }
+        });
+        $("input[name='pwd']").blur(function () {
+            if ($(this).val() !== $("input[name='UserPWD']").val()) {
+                $(this).css("border-color", "#f67b7b");
+                pwdok2 = false;
+            } else {
+                $(this).css("border-color", "");
+                pwdok2 = true;
+            }
+        });
+        $(".pwd-edit").click(function () {
+            if ($("input[name='pwd']").val() == "" || $("input[name='UserPWD']").val() == "") {
+                pwdok1 = false;
+                pwdok2 = false;
+            }
+            if (pwdok1 && pwdok2) {
+                alert("密码更改成功");
+                return true;
+            } else {
+                alert("密码修改有误，检查");
+                return false;
+            }
+        });
+    });
+</script>

@@ -1,0 +1,57 @@
+﻿@model PagedList.IPagedList<AppMyRPG.Models.Notice>
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "公告列表";
+    ViewBag.NavIndex = 6;
+}
+<div class="user-panel">
+    <div class="article-top">
+        <div class="article-top-left">
+            @Html.ActionLink("添加公告", "Add")
+        </div>
+        <div class="article-top-right">
+            @using (Html.BeginForm("Article", "Notice", FormMethod.Get))
+            {
+                @Html.TextBox("selectString", ViewBag.CurrentFilter as string, new { placeholder = "搜索相关信息", @class = "article-form-text" })
+                @Html.Submit("搜索", "article-form-btn")
+            }
+            <div class="order-all">
+                <a class="downlist-btn">
+                    排序
+                    <i class="fa fa-sort-desc"></i>
+                </a>
+                <div class="downlist-well">
+                    @Html.ActionLink("按时间正序", "Article", new { order = "time", currentFilter = ViewBag.CurrentFilter })
+                    @Html.ActionLink("按时间倒序", "Article", new { order = "timedesc", currentFilter = ViewBag.CurrentFilter })
+                    @Html.ActionLink("按用户名排序", "Article", new { order = "useruid", currentFilter = ViewBag.CurrentFilter })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="article-panel">
+        <div class="notice-well">
+            @foreach (var item in Model)
+            {
+                <div class="notice-item">
+                    <div class="notice-item-title">
+                        <span>@item.NoticeID</span>
+                        <span title="@item.NoticeTitle">@item.NoticeTitle</span>
+                    </div>
+                    <div class="notice-item-cont">
+                        @item.NoticeContent
+                    </div>
+                    <div class="notice-item-nametime">
+                        <span><i class="fa fa-calendar"></i>@item.NoticeTime</span><span title="@item.UserInfo.UserUID">@item.UserInfo.UserUID</span>
+                    </div>
+                    <div class="notice-item-control">
+                        <a class="game-operate" href="@Url.Action("Edit",new { noticeid = item.NoticeID})"><i class="fa fa-edit"></i>&nbsp;修改</a>
+                        <a class="game-operate deleteBox" onclick="return confirm('是否删除');" href="@Url.Action("Delete",new { noticeid=item.NoticeID})"><i class="fa fa-trash"></i>&nbsp;删除</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<div class="myPage-well">
+    @Html.PagedListPager(Model, page => Url.Action("Article", new { page, order = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+</div>

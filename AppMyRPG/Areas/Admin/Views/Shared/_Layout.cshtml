@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title — MyRPG 后台管理 </title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/admin.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/admin.js"></script>
+    <script>
+        $(function () {
+            //导航栏选中参数
+            var navNum = @ViewBag.NavIndex;
+            $(".mynav-item").eq(navNum).attr("target", "_navIndex");
+        })
+    </script>
+</head>
+<body>
+    <div id="admin-body">
+        <div id="bd-top">
+            <div id="bd-top-home">
+                <i class="glyphicon glyphicon-home"></i>
+                <a href="~/">主站</a>
+            </div>
+            <div id="bd-top-right">
+                <div class="bd-top-item">
+                    <i class="glyphicon glyphicon-user"></i>
+                    <a href="#">@Session["UID"]</a>
+                </div>
+                <div class="bd-top-item">
+                    <i class="glyphicon glyphicon-log-out"></i>
+                    <a href="@Url.Action("Logout","Login")">退出</a>
+                </div>
+            </div>
+        </div>
+        <div id="bd-left">
+            <a id="admin-title" href="@Url.Action("Index","Start")">
+                <img src="~/Images/Admin/myrpgico.png" width="60px" height="60px">梦想<small>·Dream</small>
+            </a>
+            <a class="mynav-item" href="@Url.Action("Index","Start")">
+                <i class="fa fa-home"></i>
+                首页
+            </a>
+            @{
+                if ((string)Session["GID"] == "1")
+                {
+                    <a class="mynav-item" href="@Url.Action("Article","Game")">
+                        <i class="fa fa-gamepad"></i>
+                        游戏列表
+                    </a>
+                    <a class="mynav-item" href="@Url.Action("Article","GameType")">
+                        <i class="fa fa-map-signs"></i>
+                        游戏分类
+                    </a>
+                    <a class="mynav-item" href="@Url.Action("Article","User")">
+                        <i class="fa fa-user-circle"></i>
+                        用户列表
+                    </a>
+                    <a class="mynav-item" href="@Url.Action("Article","UserType")">
+                        <i class="fa fa-users"></i>
+                        用户类型
+                    </a>
+                }
+            }
+            <a class="mynav-item" href="@Url.Action("Article","Comment")">
+                <i class="fa fa-comments"></i>
+                评论管理
+            </a>
+            <a class="mynav-item" href="@Url.Action("Article","Notice")">
+                <i class="fa fa-sticky-note"></i>
+                公告管理
+            </a>
+            <a class="mynav-item" href="@Url.Action("Article","FriendLink")">
+                <i class="fa fa-link"></i>
+                友情链接
+            </a>
+        </div>
+        <div id="bd-main">
+            <div id="bd-main-panel">
+                @RenderBody()
+                <div id="toTop">
+                    <i class="fa fa-chevron-circle-up"></i>
+                </div>
+                <footer>
+                    <hr style="border-top-color:#B5B5B5; " />
+                    &copy;2017&nbsp;&emsp;我的RPG个人游戏资源发布站&nbsp;&emsp;Power&nbsp;By&nbsp;友则&nbsp;&emsp;E-Mail:gutrse3321@live.com
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

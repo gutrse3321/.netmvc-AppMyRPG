@@ -1,0 +1,12 @@
+﻿@model AppMyRPG.Models.Comment
+@{ Layout = null; }
+@using (Html.BeginForm("Add", "Cmt", FormMethod.Post))
+{
+<div class="addComment">
+    <h2>发表评论</h2>
+    @Html.TextAreaFor(m => m.CommentText, new { @class = "cmt-textarea", maxlength = "500", placeholder = "文明用语，字数限制500字" })
+    <div>
+        @Html.Submit("发表", "user-btn cmt-reg")
+    </div>
+</div>
+}

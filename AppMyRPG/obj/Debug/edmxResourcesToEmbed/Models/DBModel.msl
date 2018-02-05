@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_MyRPGModelStoreContainer" CdmEntityContainer="DB_MyRPGEntities">
+    <EntitySetMapping Name="Comment">
+      <EntityTypeMapping TypeName="DB_MyRPGModel.Comment">
+        <MappingFragment StoreEntitySet="Comment">
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+          <ScalarProperty Name="CommentText" ColumnName="CommentText" />
+          <ScalarProperty Name="CommentTime" ColumnName="CommentTime" />
+          <ScalarProperty Name="GameID" ColumnName="GameID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Games">
+      <EntityTypeMapping TypeName="DB_MyRPGModel.Games">
+        <MappingFragment StoreEntitySet="Games">
+          <ScalarProperty Name="GameImg3" ColumnName="GameImg3" />
+          <ScalarProperty Name="GameImg2" ColumnName="GameImg2" />
+          <ScalarProperty Name="GameImg1" ColumnName="GameImg1" />
+          <ScalarProperty Name="GameID" ColumnName="GameID" />
+          <ScalarProperty Name="GameName" ColumnName="GameName" />
+          <ScalarProperty Name="GameTime" ColumnName="GameTime" />
+          <ScalarProperty Name="GameDec" ColumnName="GameDec" />
+          <ScalarProperty Name="GameFace" ColumnName="GameFace" />
+          <ScalarProperty Name="GameCmtCount" ColumnName="GameCmtCount" />
+          <ScalarProperty Name="GameHot" ColumnName="GameHot" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="LinkID" ColumnName="LinkID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GameType">
+      <EntityTypeMapping TypeName="DB_MyRPGModel.GameType">
+        <MappingFragment StoreEntitySet="GameType">
+          <ScalarProperty Name="OIID" ColumnName="OIID" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="TypeClass" ColumnName="TypeClass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Link">
+      <EntityTypeMapping TypeName="DB_MyRPGModel.Link">
+        <MappingFragment StoreEntitySet="Link">
+          <ScalarProperty Name="LinkID" ColumnName="LinkID" />
+          <ScalarProperty Name="LinkURL" ColumnName="LinkURL" />
+          <ScalarProperty Name="LinkPWD" ColumnName="LinkPWD" />
+          <ScalarProperty Name="LinkDec" ColumnName="LinkDec" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notice">
+      <EntityTypeMapping TypeName="DB_MyRPGModel.Notice">
+        <MappingFragment StoreEntitySet="Notice">
+          <ScalarProperty Name="NoticeTitle" ColumnName="NoticeTitle" />
+          <ScalarProperty Name="NoticeID" ColumnName="NoticeID" />
+          <ScalarProperty Name="NoticeContent" ColumnName="NoticeContent" />
+          <ScalarProperty Name="NoticeTime" ColumnName="NoticeTime" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserGroup">
+      <EntityTypeMapping TypeName="DB_MyRPGModel.UserGroup">
+        <MappingFragment StoreEntitySet="UserGroup">
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="GroupDec" ColumnName="GroupDec" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserInfo">
+      <EntityTypeMapping TypeName="DB_MyRPGModel.UserInfo">
+        <MappingFragment StoreEntitySet="UserInfo">
+          <ScalarProperty Name="UserRegTime" ColumnName="UserRegTime" />
+          <ScalarProperty Name="UserFace" ColumnName="UserFace" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserUID" ColumnName="UserUID" />
+          <ScalarProperty Name="UserPWD" ColumnName="UserPWD" />
+          <ScalarProperty Name="UserNickname" ColumnName="UserNickname" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="UserRegState" ColumnName="UserRegState" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FriendLink">
+      <EntityTypeMapping TypeName="DB_MyRPGModel.FriendLink">
+        <MappingFragment StoreEntitySet="FriendLink">
+          <ScalarProperty Name="FLUrl" ColumnName="FLUrl" />
+          <ScalarProperty Name="FLName" ColumnName="FLName" />
+          <ScalarProperty Name="FLID" ColumnName="FLID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OutIn">
+      <EntityTypeMapping TypeName="DB_MyRPGModel.OutIn">
+        <MappingFragment StoreEntitySet="OutIn">
+          <ScalarProperty Name="OIName" ColumnName="OIName" />
+          <ScalarProperty Name="OIID" ColumnName="OIID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

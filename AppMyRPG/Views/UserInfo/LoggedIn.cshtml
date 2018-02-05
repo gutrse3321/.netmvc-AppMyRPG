@@ -1,0 +1,20 @@
+﻿@model AppMyRPG.Models.UserInfo
+@{ Layout = null; }
+<div class="user-detail">
+    <div class="user-detail-facename">
+        <div class="user-detail-facename-face">
+            <img src="@Model.UserFace"/>
+        </div>
+        <span title="@Model.UserNickname">@Model.UserNickname</span>
+        <span><i class="fa fa-id-card"></i>&nbsp;@Model.UserUID</span>
+    </div>
+    <div class="user-detail-msg">
+        <div class="user-detail-msg-center">
+            @Html.Label(Model.UserRegState == 1 ? "已验证" : "未验证")
+            @Html.ActionLink("个人中心","Detail","UserInfo",new { UserID=Model.UserID},new { target="_blank"})
+        </div>
+        <div class="user-detail-signout">
+            @Html.ActionLink("登出", "SignOut", "UserInfo")
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c4b4f68c93bc44988dbb8ab9852f165d" Name="Diagram1" ZoomLevel="53">
+        <EntityTypeShape EntityType="DB_MyRPGModel.Comment" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MyRPGModel.Games" Width="1.5" PointX="7.375" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MyRPGModel.GameType" Width="1.5" PointX="3" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MyRPGModel.Link" Width="1.5" PointX="7.375" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MyRPGModel.Notice" Width="1.5" PointX="3.125" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MyRPGModel.UserGroup" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_MyRPGModel.UserInfo" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <AssociationConnector Association="DB_MyRPGModel.FK_GameID_COMMENT" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_MyRPGModel.FK_UserID_COMMENT" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_MyRPGModel.FK__Games__LinkID__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_MyRPGModel.FK__Games__TypeID__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_MyRPGModel.FK__Games__UserID__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_MyRPGModel.FK__Notice__UserID__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_MyRPGModel.FK_GroupID_USERINFO" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DB_MyRPGModel.FriendLink" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_MyRPGModel.OutIn" Width="1.5" PointX="0.75" PointY="2.125" />
+        <AssociationConnector Association="DB_MyRPGModel.FK__GameType__OIID__02FC7413" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

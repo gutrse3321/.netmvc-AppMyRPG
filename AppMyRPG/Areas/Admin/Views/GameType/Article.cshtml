@@ -1,0 +1,35 @@
+﻿@model PagedList.IPagedList<AppMyRPG.Models.GameType>
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "游戏分类";
+    ViewBag.NavIndex = 2;
+}
+<div class="article-top">
+    <div class="article-top-left">
+        @Html.ActionLink("添加分类","Add")
+    </div>
+    <div class="article-top-right">
+        <div class="order-all">
+            <a class="downlist-btn">
+                表里排序
+                <i class="fa fa-sort-desc"></i>
+            </a>
+            <div class="downlist-well">
+                @Html.ActionLink("所有", "Article", new { order = 1 })
+                @Html.ActionLink("表", "Article", new { order = 2 })
+                @Html.ActionLink("里", "Article", new { order = 3 })
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="article-panel">
+    @foreach (var item in Model)
+    {
+        @Html.Partial("_GameTypeSummary", item)
+    }
+</div>
+<div class="myPage-well">
+    @Html.PagedListPager(Model, page => Url.Action("Article",new { page}))
+</div>
+

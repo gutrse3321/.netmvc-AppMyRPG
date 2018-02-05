@@ -1,0 +1,33 @@
+﻿@model AppMyRPG.Models.UserInfo
+@{
+    ViewBag.Title = "修改用户";
+    ViewBag.NavIndex = 3;
+}
+@using (Html.BeginForm("Edit", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(m=>m.UserID)
+    <div class="user-input-panel">
+        <div class="user-input-face">
+            <img class="user-face" src="@Model.UserFace" />
+            <a class="user-file">添加头像</a>
+            <input type="file" id="UserFace" name="UserFace" accept="image/png,image/jpeg" />
+            <hr />
+            <small>建议上传960*960高清头像</small>
+        </div>
+        <div class="user-input-cont">
+            <div class="user-cont-uidpwd">
+                <span>用户名：@Html.TextBoxFor(m => m.UserUID, new { @class = "my-textbox user-textbox", @readonly= "readonly" })</span>
+            </div>
+            <div class="user-cont-other">
+                <span>昵&emsp;称：@Html.TextBoxFor(m => m.UserNickname, new { @class = "my-textbox user-textbox", placeholder = "输入昵称", maxlength = "10" })</span>
+                <span>邮&emsp;箱：@Html.TextBoxFor(m => m.UserEmail, new { @class = "my-textbox user-textbox", placeholder = "输入邮箱", maxlength = "80" })</span>
+                <span>验&emsp;证：是&nbsp;<input type="radio" checked="checked" name="RegState" value="1" />&emsp;否&nbsp;<input type="radio" name="RegState" value="0" /></span>
+                <span>权&emsp;限：@Html.DropDownList("GroupID", null, new { @class = "my-DropDown" })</span>
+            </div>
+            <div class="game-submit-well">
+                @Html.Submit("提交修改", "game-submit user-submit")
+                <a href="#" class="btnNo" onclick="window.history.back();">取消返回</a>
+            </div>
+        </div>
+    </div>
+}

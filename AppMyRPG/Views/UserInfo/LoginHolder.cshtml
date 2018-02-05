@@ -1,0 +1,34 @@
+﻿@model AppMyRPG.Models.UserInfo
+@{
+    ViewBag.Title = "登陆";
+    Layout = "~/Views/Shared/_HolderLayout.cshtml";
+    ViewBag.NavIndex = 5;
+}
+@using (Html.BeginForm("LoginHolder", "UserInfo", FormMethod.Post))
+{
+    <div class="user-loginHolder">
+        <div class="user-form-group">
+            用户名&emsp;@Html.TextBoxFor(m => m.UserUID, new { @class = "user-textbox engNum", placeholder = "输入账号" })
+            @Html.ValidationMessageFor(m => m.UserUID, "", new { @class = "text-danger" })
+        </div>
+        <div class="user-form-group">
+            密&emsp;码&emsp;@Html.PasswordFor(m => m.UserPWD, new { @class = "user-textbox", placeholder = "输入密码", maxlength = "18" })
+            @Html.ValidationMessageFor(m => m.UserPWD, "", new { @class = "text-danger" })
+        </div>
+        <div class="user-form-forgot">
+            @Html.ActionLink("忘记密码了？", "ForgotPwd", "UserInfo")
+        </div>
+        <div class="user-form-group">
+            @Html.Submit("登录", "user-btn")@Html.ActionLink("注册", "RegisterHolder", "UserInfo", null, new { @class = "user-btn" })
+        </div>
+    </div>
+}
+<script>
+    $(function () {
+        //禁止输入框输入中文和特殊符号
+        $(".engNum").keyup(function () {
+            var rep = /[\W]/g;
+            this.value = this.value.replace(rep, "");
+        });
+    });
+</script>

@@ -1,0 +1,1024 @@
+﻿body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #EDEDED;
+}
+a {color: #000;transition: 1s;}
+    a:hover {text-decoration: none;color: #87CEFF;}
+    a:visited {color: #000;}
+footer {width: 1000px;height: 70px;position: relative;bottom: 0;margin:0 auto; margin-top: 20px;color: #B5B5B5;font-size: 13px;text-align: center;}
+table { width: 100%;border-collapse: collapse;table-layout: fixed;}
+    table th, td {
+        border: 1px solid #EDEDED;
+        font-size: 16px;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+input, select {
+    background: none;
+    outline: none;
+    border: 0;
+}
+
+/*自定义常用*/
+[target=_navIndex] {
+    border-radius: 15px 15px 15px 15px;
+    color: #fff !important;
+    background: #87CEFF;
+}
+.my-success {
+    color:#9eef7b;
+}
+.my-down {
+    color:#f67b7b;
+}
+.my-textbox {
+    width:100%;
+    border: 1px solid #ccc;
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+}
+    .my-textbox:hover,.my-textbox:focus {
+        border-color:#87CEFF;
+    }
+.my-DropDown {
+    width:120px;
+    height:40px;
+    border:1px solid #ccc;
+    padding-left:15px;
+    border-radius:10px 10px 10px 10px;
+    transition:0.3s;
+}
+    .my-DropDown:hover {
+        border-color:#87CEFF;
+    }
+.my-validBox {
+    font-size:13px;
+    padding:5px;
+    background:#f67b7b;
+    border-radius:3px 3px 3px 3px;
+    box-shadow:0 0 4px #B5B5B5;
+    color:#fff;
+}
+.myPage-well {
+    display:flex;
+    width:100%;
+    justify-content:center;
+}
+
+/*布局页样式*/
+#admin-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#bd-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    box-shadow: 0 -4px 15px #ccc;
+    font-size: 15px;
+    z-index: 10;
+}
+#bd-top-home {
+    position: absolute;
+    left: 40px;
+    height: 100%;
+    width: auto;
+    line-height: 40px;
+}
+#bd-top-right {
+    position: absolute;
+    right: 40px;
+    height: 100%;
+    width: auto;
+    line-height: 40px;
+}
+.bd-top-item {
+    float: left;
+    margin-left: 10px;
+}
+#bd-left {
+    position: fixed;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    padding-top: 50px;
+    background: #fff;
+    box-shadow: -2px 0 15px #ccc;
+    z-index: 9;
+}
+#bd-main {
+    position: absolute;
+    top: 40px;
+    left: 220px;
+    height: auto;
+}
+#bd-main-panel {
+    position: relative;
+    top: 30px;
+    left: 10px;
+    right: 10px;
+    margin: 0 auto;
+    width: 1000px;
+}
+#admin-title {
+    display: block;
+    margin: 0 auto;
+    height: 60px;
+    width: 200px;
+    font-size: 25px;
+    line-height: 60px;
+}
+.mynav-item {
+    display: block;
+    width: 160px;
+    height: 38px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 38px;
+    text-align: center;
+    transition: 1s;
+}
+    .mynav-item:hover {
+        color: #87CEFF;
+    }
+#toTop {
+    display:none;
+    position:fixed;
+    right:30px;
+    bottom:30px;
+    width:50px;
+    height:50px;
+    font-size:50px;
+    color:#87CEFF;
+    background:#fff;
+    border-radius:50%;
+    line-height:50px;
+    text-align:center;
+    box-shadow:0 0 3px #87CEFF;
+    transition:0.3s;
+    z-index:10;
+}
+    #toTop:hover {
+        color: #7dc5f7;
+        box-shadow: 0 0 10px #87CEFF;
+    }
+
+/* 首页样式 Action:Start/Index */
+#index-top {
+    width:100%;
+    height:160px;
+    border-radius:3px 3px 3px 3px;
+    background:#fff;
+    box-shadow:1px 1px 1px #d4d4d4;
+    padding-top:20px;
+    padding-left:50px;
+    padding-right:50px;
+    margin-bottom:10px;
+}
+.index-top-item {
+    display:block;
+    float:left;
+    width:299px;
+    height:120px;
+    border-right:1px solid #EDEDED;
+    line-height:120px;
+    text-align:center;
+    font-size:40px;
+}
+    /*子级的 i 标签样式和 small 标签统一样式*/
+.index-top-item small,.index-top-bor small {
+    color:#B5B5B5;
+    font-size:30px;
+}
+    .index-top-item:nth-child(1) i {
+        color:#f67b7b;
+    }
+    .index-top-item:nth-child(2) i {
+        color:#7dc5f7;
+    }
+    .index-top-item:nth-last-child(1) {
+        border-right:none !important;
+    }
+        .index-top-item:nth-last-child(1) i {
+            color: #9eef7b;
+        }
+
+#index-bottom {
+    display:flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.index-bottom-item {
+    width: 300px;
+}
+/*.index-bottom-item的子项.index-item-well*/
+.index-item-well {
+    width:100%;
+    margin-bottom:10px;
+    background: #fff;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 1px 1px 1px #d4d4d4;
+    color:#B5B5B5;
+    transition:0.5s;
+}
+    .index-item-well:hover {
+        color:#6d6d6d;
+    }
+.item-well-title {
+    display: block;
+    height: 30px;
+    margin-bottom: -20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-indent: 2em;
+    font-size: 16px;
+    line-height: 30px;
+}
+/*游戏框图片和标题*/
+.index-item-game {
+    display: block;
+    width:100%;
+    height:220px;
+    text-align: center;
+}
+    .index-item-game span {
+        display:block;
+        width:100%;
+        color:#6d6d6d;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+/*游戏框下方父框和链接*/
+.index-game-bottom {
+    display: flex;
+    margin-top: 5px;
+    width: 100%;
+    height:30px;
+    justify-content: space-around;
+}
+.index-gbottom-item {
+    display: block;
+    width: 90px;
+    height: 20px;
+    border-right: 1px solid #e2e2e2;
+    color: #6d6d6d;
+    text-align:center;
+}
+    .index-gbottom-item:nth-last-child(1) {
+        border:none;
+    }
+
+    /*游戏列表Article 样式*/
+.article-top {
+    margin:0 auto;
+    width:940px;
+    height:50px;
+    padding:8px;
+}
+.article-top-left {
+    float:left;
+    height:100%;
+    width:80px;
+    border-radius:10px 10px;
+    box-shadow:1px 1px 3px #B5B5B5;
+    line-height:34px;
+    background:#7dc5f7;
+    text-align:center;
+}
+    .article-top-left a {
+        color:#fff;
+    }
+.article-top-right {
+    float:right;
+    height:100%;
+    width:500px;
+}
+    .article-top-right input {
+        float: left;
+        height: 34px;
+    }
+.article-form-text {
+    width:120px;
+    padding-left:10px;
+    box-shadow:0 0 1px #6d6d6d;
+    background:#fff !important;
+    border-radius:16px 0 0 16px;
+    transition:0.2s;
+}
+    .article-form-text:focus {
+        box-shadow: 0 0 5px #87CEFF;
+    }
+.article-form-btn {
+    width:50px;
+    color:#fff;
+    border-radius:0 16px 16px 0;
+    background:#7dc5f7 !important;
+}
+.category-all, .order-all {
+    position:relative;
+    float: right;
+    width: 90px;
+    height: 100%;
+    line-height:34px;
+    text-align:center;
+}
+.downlist-well {
+    display:none;
+    position:absolute;
+    width: 90px;
+    background: #fff;
+    border-radius: 0 0 10px 10px;
+    box-shadow:0 0 3px #6d6d6d;
+    z-index:6;
+}
+    .downlist-well a {
+        display: block;
+        width: 100%;
+        height: 46px;
+        line-height:46px;
+        color:#B5B5B5;
+        border-top: 1px solid #ccc;
+    }
+        .downlist-well a:hover {
+            background:#EDEDED;
+        }
+
+/*显示列表的最外框*/
+.article-panel {
+    margin: 0 auto;
+    width: 940px;
+}
+/*article-game 游戏管理*/
+.article-game-well {
+    margin-bottom: 20px;
+    padding:16px;
+    width: 100%;
+    height: 160px;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 1px 1px 1px #d4d4d4;
+    background:#fff;
+}
+.article-game-item {
+    width: 100%;
+    height: 100%;
+}
+    .article-game-face img {
+        float:left;
+        width:196px;
+        height:128px;
+        border-radius:10px 10px 10px 10px;
+    }
+.article-game-content {
+    position:relative;
+    float:left;
+    width:522px;
+    height:100%;
+}
+/*article-game-content子项*/
+.article-game-title {
+    float: left;
+    width: 100%;
+    height: 20px;
+}
+     /*title的游戏类别显示样式*/
+    .article-game-title div {
+        float: left;
+        width: 90px;
+        margin-left: 18px;
+        margin-right: 18px;
+        padding: 2px;
+        box-shadow: 0 0 3px #B5B5B5;
+        border-radius: 10px 10px;
+        font-size: 16px;
+        color: #B5B5B5;
+        text-align: center;
+    }
+    .article-game-title a {
+        float: left;
+        width:390px;
+        font-size: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+.article-game-time {
+    float:left;
+    width: 100%;
+    height: 80px;
+    padding-left:18px;
+    font-size: 15px;
+    color: #B5B5B5;
+    line-height: 80px;
+}
+.article-game-tar {
+    float:left;
+    width:100%;
+    height:28px;
+}
+    .article-game-tar span {
+        margin-left:18px;
+        color:#6d6d6d;
+        line-height:28px;
+    }
+.article-game-operate {
+    position:absolute;
+    top:48px;
+    right:-100px;
+    width:150px;
+    height:30px;
+}
+    /*游戏列表操作 修改-删除*/
+.game-operate {
+    float:left;
+    width:60px;
+    height:100%;
+    margin-left:10px;
+    border-radius:17px 17px;
+    color:#fff;
+    text-align:center;
+    line-height:30px;
+}
+    .game-operate:hover {
+        color:#fff;
+    }
+    .game-operate:visited {
+        color: #fff !important;
+    }
+    .game-operate:nth-child(1) {
+        background: #87CEFF;
+    }
+    .game-operate:nth-child(2) {
+        background:#f67b7b;
+    }
+    /*游戏修改页样式*/
+.game-edit-panel {
+    width:100%;
+    padding:30px;
+    border-radius:0 0 10px 10px;
+    box-shadow:1px 3px 3px #6d6d6d;
+    background:#fff;
+}
+.game-edit-well {
+    width:100%;
+}
+/*gedit的游戏封面和游戏名称样式*/
+.gedit-imgtitle {
+    position:relative;
+    width:100%;
+    height:200px;
+}
+#gedit-face, #gedit-gname {
+    float: left;
+    height: 100%;
+}
+.gedit-imgtitle #GameFace,#UserFace {
+    display: none;
+}
+.gedit-imgtitle img, .gedit-imgtitle a {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px 10px 10px 10px;
+}
+    .gedit-imgtitle a {
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        font-size:20px;
+        line-height:200px;
+        text-align:center;
+        color:#fff;
+        background:rgba(169,169,169,0.5);
+    }
+.gname-textbox {
+    margin-top:70px;
+    margin-left:30px;
+    width:600px;
+    height:40px;
+}
+/*gedit的其他样式*/
+.gedit-main {
+    position:relative;
+    padding:10px;
+    width:100%;
+}
+.gedit-screenshot {
+    width:100%;
+    height:180px;
+}
+    .gedit-screenshot span {
+        display:block;
+        width:100%;
+        font-size:10px;
+        color:#B5B5B5;
+    }
+        .gedit-screenshot span:hover {
+            color:#6d6d6d;
+        }
+.screenshot-item {
+    position:relative;
+    display:flex;
+    width:100%;
+    height:170px;
+    justify-content:space-around;
+}
+    .screenshot-item img, .gedit-file-img {
+        width: 280px;
+        height: 170px;
+    }
+.gedit-file-img {
+    position:absolute;
+    top:0;
+    display: block;
+    border-radius:0;
+    font-size: 20px;
+    line-height: 170px;
+    text-align: center;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+}
+#GameImg1, #GameImg2, #GameImg3 {
+    display:none;
+}
+.gedit-content-well {
+    display: flex;
+    margin-top: 30px;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    border-top: 1px solid #ccc;
+    justify-content: space-around;
+}
+.gedit-cleft {
+    width:280px;
+}
+.gedit-cright {
+    width: 600px;
+}
+.gedit-cright-item {
+    width:100%;
+    margin-bottom:20px;
+}
+.glink-textbox {
+    width: 450px;
+    height: 30px;
+}
+.glink-pwd-textbox {
+    width:45px;
+    height:30px;
+}
+.gdec-textarea {
+    width:600px;
+    height:200px;
+    max-width:600px;
+    max-height:200px;
+}
+/*提交样式*/
+.game-submit-well {
+    display:flex;
+    width:100%;
+    height:50px;
+    justify-content:space-around;
+}
+.game-submit {
+    width:100px;
+    height:100%;
+    background:#87CEFF;
+    text-align:center;
+    color:#fff;
+}
+.btnNo {
+    width: 100px;
+    height: 100%;
+    background:#fa9b9b;
+    line-height:50px;
+    text-align: center;
+    color: #fff;
+}
+.btnNo:hover {
+    background:#f67b7b;
+}
+    .game-submit:hover {
+        background:#7dc5f7;
+    }
+
+/*游戏类型样式*/
+/*类型列表样式*/
+.type-well {
+    position:relative;
+    width:100%;
+    height:50px;
+    padding:10px;
+    background:#fff;
+    border-bottom:1px solid #ccc;
+    border-radius:10px 10px 10px 10px;
+    box-shadow:3px 3px 3px #B5B5B5;
+    transition:0.2s;
+}
+    .type-well:hover {
+        box-shadow: 3px 3px 20px #B5B5B5;
+        z-index: 8;
+    }
+.type-outin {
+    float:left;
+    height:100%;
+    width:30px;
+    line-height:30px;
+    text-align:center;
+    box-shadow:0 0 20px #EDEDED inset;
+    border-radius:5px 5px 5px 5px;
+}
+.type-name {
+    float:left;
+    width:200px;
+    height:100%;
+    line-height:30px;
+    text-align:center;
+    margin-left:200px;
+    color:#B5B5B5;
+    border-radius:5px 5px 5px 5px;
+    box-shadow:0 0 20px #EDEDED inset;
+}
+.type-operate {
+    float:right;
+    width:200px;
+    height:100%;
+
+}
+    .type-operate a:visited {
+        color:#fff;
+    }
+/*添加分类和修改样式*/
+.type-textbox {
+    width:180px !important;
+    font-size:20px;
+} 
+.type-control-panel {
+    display:flex;
+    justify-content:space-between;
+    margin:0 auto;
+    width:600px;
+    padding:20px;
+    background:#fff;
+    border-radius:10px 10px 10px 10px;
+    box-shadow:3px 3px 50px #B5B5B5;
+}
+.type-control-well {
+    width:300px;
+}
+.type-control-read {
+    width: 260px;
+    font-size:16px;
+    color:#ccc;
+    line-height:22px;
+}
+/*用户管理表样式*/
+.user-panel {
+    width:100%;
+    padding:20px;
+    border-radius:20px 20px 20px 20px;
+    box-shadow:1px 1px 3px #B5B5B5;
+    background:#fff;
+}
+.user-well {
+    width:100%;
+    padding:20px;
+}
+.user-item {
+    display:flex;
+    position:relative;
+    width:100%;
+    height:100px;
+    box-shadow:0 0 10px #EDEDED;
+    padding-left:50px;
+    transition:0.2s;
+    justify-content:space-between;
+}
+    .user-item:hover {
+        right: 20px;
+        box-shadow: 0 0 10px #B5B5B5;
+        z-index:8;
+    }
+.user-imgbox {
+    height:100%;
+    width:180px;
+}
+    .user-imgbox img {
+        height:100px;
+        width:100px;
+    }
+.user-info {
+    height:100%;
+    width:470px;
+}
+.user-info-tt {
+    display:flex;
+    height:30px;
+    width:100%;
+    justify-content:flex-start;
+}
+    .user-info-tt > span {
+        display:block;
+        width:100px;
+        height:100%;
+        line-height:30px;
+    }
+    .user-info-tt span:nth-child(1) {
+        font-size: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .user-info-tt span:nth-child(2) {
+        color:#ccc;
+    }
+.user-info-cont {
+    height:40px;
+    width:100%;
+    font-size:18px;
+    color:#bde6eb;
+    line-height:45px;
+}
+.user-info-time {
+    height:30px;
+    width:100%;
+    color:#e2e2e2;
+    line-height:30px;
+}
+.user-control {
+    height:100%;
+    width:200px;
+}
+.user-operate {
+    height:30px;
+    margin-top:33px;
+}
+/*用户添加修改样式*/
+.user-input-panel {
+    display:flex;
+    width:700px;
+    padding:20px;
+    margin:0 auto;
+    background:#fff;
+    border-radius:10px 10px 10px 10px;
+    box-shadow:3px 3px 3px #B5B5B5;
+    justify-content:space-between;
+}
+.user-input-face {
+    position:relative;
+    width:240px;
+    height:240px;
+    box-shadow:0 0 3px #EDEDED;
+    transition:0.5s;
+}
+    .user-input-face:hover {
+        box-shadow: 0 0 6px #EDEDED;
+    }
+.user-face {
+    width:240px;
+    height:240px;
+}
+.user-file {
+    position: absolute;
+    top: 0;
+    width: 240px;
+    height: 240px;
+    display: block;
+    border-radius: 0;
+    font-size: 20px;
+    line-height: 240px;
+    text-align: center;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+} 
+.user-input-cont {
+    width: 560px;
+    padding: 20px;
+}
+.user-cont-uidpwd {
+    width: 100%;
+    border-bottom: 1px solid #EDEDED;
+    margin-bottom:10px;
+}
+.user-input-cont span {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.user-textbox {
+    width: 300px;
+    height: 30px;
+}
+.user-cont-other {
+    width:100%;
+}
+/*用户类型样式*/
+.usertype-name {
+    float: left;
+    min-width: 100px;
+    height: 100%;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 20px;
+    color: #B5B5B5;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 20px #EDEDED inset;
+}
+.usertype-dec {
+    float: left;
+    min-width: 200px;
+    height: 100%;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 100px;
+    color: #B5B5B5;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 20px #EDEDED inset;
+}
+/*公告表样式*/
+.notice-well {
+    position:relative;
+    width:100%;
+    padding:20px;
+    column-count:4;
+    column-gap:6.25px;
+    column-rule:0px solid #ff0000;
+}
+.notice-item {
+    display:inline-block;
+    margin-bottom:10px;
+    padding:10px;
+    width:200px;
+    min-height:180px;
+    box-shadow:0 0 6px #EDEDED;
+    border-radius:6px 6px 6px 6px;
+    background:#FFF;
+    transition:0.3s;
+}
+    .notice-item:hover {
+        box-shadow:0 0 10px #ccc;
+        z-index:9;
+    }
+.notice-item-title {
+    width:100%;
+    height:20px;
+    border-bottom:1px solid #EDEDED;
+    font-size:14px;
+    line-height:20px;
+    color:#B5B5B5;
+}
+    .notice-item-title span:first-child {
+        display:block;
+        float:left;
+        width:18px;
+        height:18px;
+        font-size:10px;
+        text-align:center;
+        border-radius:3px 3px 3px 3px;
+        box-shadow:0 0 1px #ccc inset;
+    }
+    .notice-item-title span:last-child {
+        display: block;
+        float: left;
+        width: 150px;
+        text-indent: 1em;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+.notice-item-cont {
+    width: 100%;
+    text-indent: 2em;
+    color: #B5B5B5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 25;
+    overflow: hidden;
+    transition:0.2s;
+}
+    .notice-item-cont:hover {
+        color:#6d6d6d;
+    }
+.notice-item-nametime {
+    width:100%;
+    height:20px;
+}
+    .notice-item-nametime span {
+        float:left;
+        margin-top:10px;
+        border-top:1px solid #d4d4d4;
+        font-size:13px;
+    }
+        .notice-item-nametime span:first-child {
+            width:140px;
+        }
+        .notice-item-nametime span:last-child {
+            width: 40px;
+            overflow:hidden;
+            white-space:nowrap;
+            text-overflow:ellipsis;
+        }
+.notice-item-control {
+    margin-top:20px;
+    width:100%;
+    height:30px;
+}
+.notice-textbox {
+    width: 250px;
+    height: 200px;
+    min-height:245px;
+    min-height:150px;
+    max-width: 250px;
+    max-height: 400px;
+}
+/*评论列表样式*/
+.cmt-panel {
+    width:800px;
+    margin:0 auto;
+}
+.cmt-item {
+    width:100%;
+    height:150px;
+    background:#fff;
+    border-bottom:1px solid #ccc;
+    color:#B5B5B5;
+    transition:0.3s;
+}
+    .cmt-item:hover {
+        color:#6d6d6d;
+        border-bottom:none;
+        box-shadow:0 0 5px #B5B5B5;
+        z-index:8;
+    }
+.cmt-item-check {
+    float:left;
+    height:100%;
+    width:50px;
+}
+    .cmt-item-check input {
+        margin-top:70px;
+        margin-left:10px;
+    }
+.cmt-item-user {
+    float:left;
+    width:120px;
+    height:100%;
+    text-align:center;
+}
+    .cmt-item-user img {
+        margin-top:20px;
+        width:90px;
+        height:90px;
+        border-radius:50%;
+    }
+.cmt-item-cont {
+    float:left;
+    width:500px;
+}
+.cmt-cont-cmt {
+    width: 100%;
+    height: 99px;
+    line-height:99px;
+    border-bottom: 1px solid #ccc;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.cmt-cont-timegame {
+    width:100%;
+    height:50px;
+}
+    .cmt-cont-timegame span {
+        display:block;
+        float:left;
+        height:100%;
+        font-size:11px;
+        line-height:50px;
+    }
+        .cmt-cont-timegame span:first-child {
+            width:130px;
+        }
+        .cmt-cont-timegame span:last-child {
+            width:300px;
+            overflow:hidden;
+            white-space:nowrap;
+            text-overflow:ellipsis;
+        }
+.cmt-item-control {
+    float:left;
+    width:100px;
+    height:100%;
+    line-height:150px;
+    text-align:center;
+}

@@ -1,0 +1,15 @@
+﻿@model IEnumerable<AppMyRPG.Models.UserInfo>
+<div class="index-bottom-item">
+    <div class="index-item-well">
+        <table>
+        @foreach (var item in Model) {
+            <tr>
+                <td title="@item.UserUID">@item.UserUID</td>
+                <td style="width:150px;" title="@item.UserEmail">@item.UserEmail</td>
+                <td>@Html.Label(item.UserRegState==1?"已验证":"未验证",new { @class=item.UserRegState==1?"my-success":"my-down"})</td>
+            </tr>
+        }
+        </table>
+    </div>
+</div>
+

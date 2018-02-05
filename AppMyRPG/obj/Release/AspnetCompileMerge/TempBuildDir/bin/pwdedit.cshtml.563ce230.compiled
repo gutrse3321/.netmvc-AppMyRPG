@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="2" virtualPath="/Views/UserInfo/PwdEdit.cshtml" hash="ffffffffcf6b0aaf" filehash="2944db53ad1d" flags="110000" assembly="App_Web_pstse00a" type="ASP._Page_Views_UserInfo_PwdEdit_cshtml">
+    <filedeps>
+        <filedep name="/Views/UserInfo/PwdEdit.cshtml" />
+    </filedeps>
+</preserve>

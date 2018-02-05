@@ -1,0 +1,44 @@
+﻿@model PagedList.IPagedList<AppMyRPG.Models.UserInfo>
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "用户列表";
+    ViewBag.NavIndex = 3;
+}
+<div class="user-panel">
+    <div class="article-top">
+        <div class="article-top-left">
+            @Html.ActionLink("添加用户", "Add")
+        </div>
+        <div class="article-top-right">
+            @using (Html.BeginForm("Article", "User", FormMethod.Get))
+            {
+                @Html.TextBox("selectString", ViewBag.CurrentFilter as string, new { placeholder = "搜索用户", @class = "article-form-text" })
+                @Html.Submit("搜索", "article-form-btn")
+            }
+            <div class="order-all">
+                <a class="downlist-btn">
+                    排序
+                    <i class="fa fa-sort-desc"></i>
+                </a>
+                <div class="downlist-well">
+                    @Html.ActionLink("按时间正序", "Article", new { order = "time", currentFilter = ViewBag.CurrentFilter })
+                    @Html.ActionLink("按时间倒序", "Article", new { order = "timedesc", currentFilter = ViewBag.CurrentFilter })
+                    @Html.ActionLink("按用户组排序", "Article", new { order = "usertype", currentFilter = ViewBag.CurrentFilter })
+                    @Html.ActionLink("未验证排序", "Article", new { order = "state", currentFilter = ViewBag.CurrentFilter })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="article-panel">
+        <div class="user-well">
+            @foreach (var item in Model)
+            {
+                @Html.Partial("_UserInfoSummary", item)
+            }
+        </div>
+    </div>
+</div>
+<div class="myPage-well">
+    @Html.PagedListPager(Model,page => Url.Action("Article",new { page, order = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+</div>
+

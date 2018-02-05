@@ -1,0 +1,21 @@
+﻿@model IEnumerable<AppMyRPG.Models.Comment>
+@{ Layout = null; }
+@foreach (var item in Model)
+{
+    <div class="ucmt-well">
+        @Html.ActionLink(item.Games.GameName, "Detail", "Game", new { id = item.GameID }, new { title = item.Games.GameName })
+        <div class="ucmt-text">
+            @item.CommentText
+        </div>
+        <div class="ucmt-timedel">
+            @{
+                if ((string)Session["UID"] == item.UserInfo.UserUID)
+                {
+                    @Html.ActionLink("删除","Delete","Cmt",new { cmtid = item.CommentID},null)
+                }
+            }
+            <span>@item.CommentTime</span>
+        </div>
+    </div>
+}
+

@@ -1,0 +1,59 @@
+﻿@model PagedList.IPagedList<AppMyRPG.Models.Notice>
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "公告&说明";
+    ViewBag.NavIndex = 3;
+}
+<div class="notice-top">
+    <div class="notice-top-title">
+        <span></span>
+        使用说明
+    </div>
+    <div class="notice-time">
+        发表于:<span>2017/9/20 20:18:32</span>
+    </div>
+    <div class="notice-cont">
+        个人资源小站
+        本站，仅分享RPG类型游戏
+        站长只是方便诸位有和站长一样的兴趣而搜集的游戏
+
+        有兴趣的话，就收藏本站，相反，遗忘就好~
+
+        关于里站，诸位仅需将邮箱验证即可进入
+        无须任何关于费用相关操作
+        谨防本站任何付费信息
+
+        解压密码:友則的罗马音
+    </div>
+</div>
+<div class="notice-panel">
+    @foreach (var item in Model)
+    {
+        <div class="notice-item">
+            <div class="notice-top-title">
+                <span></span>
+                @item.NoticeTitle
+            </div>
+            <div class="notice-time">
+                发表于:<span>@item.NoticeTime</span>
+            </div>
+            <div class="notice-cont">
+                @item.NoticeContent
+            </div>
+        </div>
+    }
+</div>
+<div class="my-pager">
+    @Html.PagedListPager(Model, page => Url.Action("Notice", new { page }))
+</div>
+<script>
+    $(function () {
+        var element = new Array();
+        var temp = null;
+        $(".notice-cont").each(function (i) {
+            element[i] = $(this);
+            temp = element[i].text().replace(/\n/g, '<br />');
+            element[i].html(temp);
+        });
+    });
+</script>

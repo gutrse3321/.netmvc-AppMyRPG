@@ -1,0 +1,30 @@
+﻿@model AppMyRPG.Models.GameType
+@{
+    ViewBag.Title = "修改类型";
+    ViewBag.NavIndex = 2;
+}
+<div class="type-control-panel">
+    <div class="type-control-well">
+        @using (Html.BeginForm(FormMethod.Post))
+        {
+            @Html.HiddenFor(m=>m.TypeID)
+            <div class="form-group">
+                @Html.LabelFor(m => m.TypeName, new { @class = "control-label" })
+                @Html.TextBoxFor(m => m.TypeName, new { @class = "my-textbox type-textbox", maxlength = "10" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.OIID, new { @class = "control-label" })
+                @Html.DropDownList("OIID", null, new { @class = "my-DropDown" })
+            </div>
+            <div class="game-submit-well">
+                @Html.Submit("提交修改", "game-submit type-submit")
+                <a href="@Url.Action("Article","GameType")" class="btnNo">取消返回</a>
+            </div>
+        }
+    </div>
+    <div class="type-control-read">
+        1.表里之分指的是，表为符合青少年游戏玩的类型，而里则是色情、暴力、血腥等<br />
+        2.分类命名请以游戏战斗类型分
+    </div>
+</div>
+

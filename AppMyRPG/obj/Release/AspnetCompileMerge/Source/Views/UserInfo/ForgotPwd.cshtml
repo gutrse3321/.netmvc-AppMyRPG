@@ -1,0 +1,41 @@
+﻿@model AppMyRPG.Models.ForgotPwdViewModel
+@{
+    ViewBag.Title = "忘记密码";
+    Layout = "~/Views/Shared/_HolderLayout.cshtml";
+}
+@using (Html.BeginForm("ForgotPwd", "UserInfo", FormMethod.Post))
+{
+    <div class="user-loginHolder">
+        <div class="user-form-group">
+            用户名&emsp;@Html.TextBoxFor(m => m.UserUID, new { @class = "user-textbox engNum", placeholder = "输入账号" })
+            @Html.ValidationMessageFor(m => m.UserUID, "", new { @class = "text-danger" })
+        </div>
+        <div class="user-form-group">
+            邮&emsp;箱&emsp;@Html.TextBoxFor(m => m.UserEmail, new { @class = "user-textbox", placeholder = "输入邮箱" })
+            @Html.ValidationMessageFor(m => m.UserEmail, "", new { @class = "text-danger" })
+        </div>
+        <div class="user-form-group">
+            @Html.Submit("发送", "user-btn")
+        </div>
+    </div>
+}
+<script>
+    $(function () {
+        //禁止输入框输入中文和特殊符号
+        $(".engNum").keyup(function () {
+            var rep = /[\W]/g;
+            this.value = this.value.replace(rep, "");
+        });
+        //邮箱输入验证
+        $("input[name='UserEmail']").keypress(function () {
+        var rep = /^\w+@@[a-z0-9]+\.[a-z]+$/i;
+        if (rep.test($(this).val())) {
+            $(this).css("border-color", "");
+            return true;
+        } else {
+            $(this).css("border-color", "#f67b7b");
+            $(this).attr("placeholder", "邮箱格式不正确");
+        }
+    });
+    });
+</script>

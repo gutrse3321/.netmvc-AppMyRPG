@@ -1,0 +1,55 @@
+﻿@model AppMyRPG.Models.UserInfo
+@{
+    ViewBag.Title = "个人中心";
+    Layout = "~/Views/Shared/_HolderLayout.cshtml";
+    ViewBag.NavIndex = 6;
+}
+<div class="detail-panel">
+    <div class="detail-facename">
+        <div class="detail-facename-face">
+            <img src="@Model.UserFace"/>
+        </div>
+        <div class="detail-facename-name">
+            <div class="detail-facename-name-uid">
+                <span>@Model.UserNickname</span>
+                <span><i class="fa fa-id-card"></i>&nbsp;@Model.UserUID</span>
+            </div>
+            <div class="detail-facename-name-power">
+                <span><i class="fa fa-users"></i>&nbsp;@Model.UserGroup.GroupName</span>
+                <span>@Model.UserGroup.GroupDec</span>
+            </div>
+            <div class="detail-facename-name-time">
+                <i class="fa fa-calendar-check-o"></i>&nbsp;@Model.UserRegTime
+            </div>
+        </div>
+    </div>
+    <div class="detail-show">
+        <div class="detail-show-left">
+            @Ajax.ActionLink("评论一栏","UserCmt","Cmt",new { userid=Model.UserID },new AjaxOptions { HttpMethod="get",UpdateTargetId= "getDetailControl",LoadingElementId="loading" })
+            @{ if ((string)Session["UID"] == Model.UserUID)
+                {
+                    @Ajax.ActionLink("个人资料", "Edit", "UserInfo", new { userid = Model.UserID }, new AjaxOptions { HttpMethod = "get", UpdateTargetId = "getDetailControl", LoadingElementId = "loading" })
+                    @Ajax.ActionLink("密码更改", "PwdEdit", "UserInfo", new { userid = Model.UserID }, new AjaxOptions { HttpMethod = "get", UpdateTargetId = "getDetailControl", LoadingElementId = "loading" })
+                }
+            }
+        </div>
+        <div id="getDetailControl">
+            <div id="loading">
+                <div id="loading-small"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+            $.ajax({
+                url: '@Url.Action("UserCmt","Cmt",new { userid = Model.UserID})',
+                success: function (res) {
+                    $("#getDetailControl").html(res);
+                },
+                error: function () {
+                    alert("error");
+                }
+            });
+    });
+</script>
