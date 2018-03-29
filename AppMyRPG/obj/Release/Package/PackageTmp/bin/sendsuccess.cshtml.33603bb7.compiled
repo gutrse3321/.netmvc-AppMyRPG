@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<preserve resultType="2" virtualPath="/Views/Email/SendSuccess.cshtml" hash="ffffffffcf6b0aaf" filehash="3f9f3b290dd3" flags="110000" assembly="App_Web_b1pgbtno" type="ASP._Page_Views_Email_SendSuccess_cshtml">
-    <filedeps>
-        <filedep name="/Views/Email/SendSuccess.cshtml" />
-    </filedeps>
-</preserve>

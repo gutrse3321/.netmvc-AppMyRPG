@@ -1,1 +1,23 @@
-这是预编译工具生成的标记文件，不应删除!
+﻿@{
+    ViewBag.Title = "后台中心";
+    ViewBag.NavIndex = 0;
+}
+<div id="index-top">
+    <div class="index-top-item">
+        <i class="fa fa-sticky-note"></i>
+        @ViewBag.NoticeCount &nbsp;<small>项</small>
+    </div>
+    <a class="index-top-item" href="@Url.Action("Article","Game",new { area="Admin"})">
+        <i class="fa fa-gamepad"></i>
+        @ViewBag.GamesCount &nbsp;<small>个</small>
+    </a>
+    <a class="index-top-item" href="@Url.Action("Article","User",new { area="Admin"})">
+        <i class="fa fa-user-circle"></i>
+        @ViewBag.UsersCount &nbsp;<small>名</small>
+    </a>
+</div>
+<div id="index-bottom">
+    @Html.Action("Notice")
+    @Html.Action("Game")
+    @Html.Action("UserInfo")
+</div>

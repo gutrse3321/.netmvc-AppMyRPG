@@ -61,3 +61,4 @@ G:\MVC\AppMyRPG\AppMyRPG\bin\PagedList.Mvc.dll
 G:\MVC\AppMyRPG\AppMyRPG\bin\PagedList.xml
 G:\MVC\AppMyRPG\AppMyRPG\bin\PagedList.Mvc.xml
 G:\MVC\AppMyRPG\AppMyRPG\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+G:\MVC\AppMyRPG\AppMyRPG\obj\Debug\AppMyRPG.csprojResolveAssemblyReference.cache

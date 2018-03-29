@@ -1,1 +1,53 @@
-这是预编译工具生成的标记文件，不应删除!
+﻿@model PagedList.IPagedList<AppMyRPG.Models.Comment>
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "评论列表";
+    ViewBag.NavIndex = 5;
+}
+<div class="article-top">
+    <div class="article-top-right">
+        @using (Html.BeginForm("Article", "Comment", FormMethod.Get))
+        {
+            @Html.TextBox("selectString", ViewBag.CurrentFilter as string, new { placeholder = "搜索评论相关", @class = "article-form-text" })
+            @Html.Submit("搜索", "article-form-btn")
+        }
+        <div class="order-all">
+            <a class="downlist-btn">
+                排序
+                <i class="fa fa-sort-desc"></i>
+            </a>
+            <div class="downlist-well">
+                @Html.ActionLink("按时间正序", "Article", new { order = "time", currentFilter = ViewBag.CurrentFilter })
+                @Html.ActionLink("按时间倒序", "Article", new { order = "timedesc" , currentFilter = ViewBag.CurrentFilter  })
+            </div>
+        </div>
+    </div>
+</div>
+<div class="article-panel">
+    <div class="cmt-panel">
+    @foreach (var item in Model)
+    {
+        <div class="cmt-item">
+            <div class="cmt-item-user">
+                <img src="@item.UserInfo.UserFace" />
+                @item.UserInfo.UserUID
+            </div>
+            <div class="cmt-item-cont">
+                <div class="cmt-cont-cmt">
+                    @item.CommentText
+                </div>
+                <div class="cmt-cont-timegame">
+                    <span>@item.CommentTime</span>
+                    <span title="@item.Games.GameName">@item.Games.GameName</span>
+                </div>
+            </div>
+            <div class="cmt-item-control">
+                    <a class="deleteBox" onclick="return confirm('是否删除');" href="@Url.Action("Delete",new { cmtid=item.CommentID})"><i class="fa fa-trash"></i>&nbsp;删除</a>
+            </div>
+        </div>
+    }
+    </div>
+</div>
+<div class="myPage-well">
+    @Html.PagedListPager(Model,page => Url.Action("Article", new { page, order = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+</div>

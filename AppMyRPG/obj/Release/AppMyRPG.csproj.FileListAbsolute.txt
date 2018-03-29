@@ -61,3 +61,4 @@ G:\MVC\AppMyRPG\AppMyRPG\bin\zh-Hans\System.Web.Mvc.resources.dll
 G:\MVC\AppMyRPG\AppMyRPG\obj\Release\AppMyRPG.csproj.CoreCompileInputs.cache
 G:\MVC\AppMyRPG\AppMyRPG\obj\Release\AppMyRPG.dll
 G:\MVC\AppMyRPG\AppMyRPG\obj\Release\AppMyRPG.pdb
+G:\MVC\AppMyRPG\AppMyRPG\obj\Release\AppMyRPG.csprojResolveAssemblyReference.cache

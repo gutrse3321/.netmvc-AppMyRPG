@@ -1,1 +1,92 @@
-这是预编译工具生成的标记文件，不应删除!
+﻿@model AppMyRPG.Models.UserInfo
+@{ Layout = null; }
+@using (Html.BeginForm("Edit", "UserInfo", FormMethod.Post, new { enctype = "multipart/form-data" })) {
+    @Html.HiddenFor(m=>m.UserID)
+    <div class="detail-control">
+        <div class="detail-edit-group">
+            <div class="detail-face">
+                <img class="user-face" src="@Model.UserFace" />
+                <a class="user-file">修改头像</a>
+                <input type="file" id="UserFace" class="userFace" name="UserFace" accept="image/png,image/jpeg" />
+                <hr />
+                <small>建议上传960*960高清头像</small>
+            </div>
+        </div>
+        <div class="detail-edit-group">
+            用户名&emsp;@Html.TextBoxFor(m=>m.UserUID,new { @class="edit-textbox",@readonly= "readonly" })
+        </div>
+        <div class="detail-edit-group">
+            昵&emsp;称&emsp;@Html.TextBoxFor(m => m.UserNickname, new { @class = "edit-textbox" })
+        </div>
+        <div class="detail-edit-group">
+            邮&emsp;箱&emsp;@Html.TextBoxFor(m => m.UserEmail, new { @class = "edit-textbox" })<br />
+            @if (Model.UserRegState == 0) {
+                @Html.ActionLink("去验证邮箱", "SendMail", "Email",new { userid = Model.UserID},new { @class="check-email"})
+            }
+        </div>
+        <hr />
+        <div class="detail-edit-group">
+            @Html.Submit("修改", "search-btn detail-edit")
+        </div>
+    </div>
+}
+<script>
+    $(function () {
+        //临时显示图片
+        $("#UserFace").change(function () {
+            var objUrl = getObjectURL(this.files[0]);
+            if (objUrl) {
+                $(".user-face").attr("src", objUrl);
+            }
+        });
+        //建立存取临时图片的url
+        function getObjectURL(file) {
+            var url = null;
+            if (window.createObjectURL !== undefined) { // 所有浏览器
+                url = window.createObjectURL(file);
+            } else if (window.URL !== undefined) { // 火狐浏览器
+                url = window.URL.createObjectURL(file);
+            } else if (window.webkitURL !== undefined) { // 谷歌
+                url = window.webkitURL.createObjectURL(file);
+            }
+            return url;
+        }
+        //触发上传input
+        $(".user-file").click(function () {
+            $(this).next().trigger("click");
+        });
+        //用户信息修改验证
+        var editok1 = false;    //昵称
+        var editok2 = false;    //邮箱
+        //邮箱输入验证
+        $("input[name='UserEmail']").blur(function () {
+            var rep = /^\w+@@[a-z0-9]+\.[a-z]+$/i;
+            if (rep.test($(this).val())) {
+                $(this).css("border-color", "");
+                editok2 = true;
+                return true;
+            } else {
+                $(this).css("border-color", "#f67b7b");
+                $(this).attr("placeholder", "邮箱格式不正确");
+                $(this).focus();
+                editok2 = false;
+            }
+    });
+        $(".detail-edit").click(function () {
+            if ($("input[name='UserNickname']").val() === "" || $("input[name='UserEmail']").val() === "") {
+                editok1 = false;
+                editok2 = false;
+            } else {
+                editok1 = true;
+                editok2 = true;
+            }
+            if (editok1 && editok2) {
+                alert("修改成功");
+                return true;
+            } else {
+                alert("存在错误项哦！");
+                return false;
+            }
+        });
+    });
+</script>

@@ -11,11 +11,14 @@ namespace AppMyRPG.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class FriendLink
     {
         public int FLID { get; set; }
+        [Display(Name = "友链名称")]
         public string FLName { get; set; }
+        [Display(Name = "友链网址")]
         public string FLUrl { get; set; }
     }
 }

@@ -1,1 +1,52 @@
-这是预编译工具生成的标记文件，不应删除!
+﻿@model PagedList.IPagedList<AppMyRPG.Models.Games>
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "热门排行";
+    ViewBag.NavIndex = 1;
+}
+<div class="game-list">
+    @using (Html.BeginForm("Hot", "Home", FormMethod.Get))
+    {
+        <div class="game-control">
+            @Html.TextBox("selectString", ViewBag.CurrentFilter as string, new { placeholder = "搜索游戏", @class = "game-search" })
+            @Html.Submit("搜索", "search-btn")
+            <div class="order-all">
+                <a class="downlist-btn">
+                    分类
+                    <i class="fa fa-sort-desc"></i>
+                </a>
+                <div class="downlist-well">
+                    @Html.ActionLink("所有","Hot")
+                    @foreach (var io in ViewBag.OrderNum)
+                    {
+                        <a href="@Url.Action("Hot","Home", new { order = io, currentFilter = ViewBag.CurrentFilter })">@io</a>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+    <div class="game-well">
+        @foreach (var item in Model)
+        {
+            <div class="game-item">
+                <a href="@Url.Action("Detail","Game",new { id=item.GameID})" class="item-title" title="@item.GameName" target="_blank">
+                    @item.GameName
+                </a>
+                <div class="item-dec">
+                    <img class="lazy" data-original="@item.GameFace" />
+                    <div class="item-dec-cont">
+                        @item.GameDec
+                    </div>
+                </div>
+                <div class="item-timecmthot">
+                    <span><i class="fa fa-calendar">&nbsp;</i>@item.GameTime</span>
+                    <span><i class="fa fa-commenting">&nbsp;</i>@item.GameCmtCount</span>
+                    <span><i class="fa fa-share">&nbsp;</i>@item.GameHot</span>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<div class="my-pager">
+    @Html.PagedListPager(Model, page => Url.Action("Hot", new { page, currentFilter = ViewBag.CurrentFilter }))
+</div>

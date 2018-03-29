@@ -1,1 +1,26 @@
-这是预编译工具生成的标记文件，不应删除!
+﻿@model IEnumerable<AppMyRPG.Models.Games>
+<div class="index-bottom-item">
+   @foreach (var item in Model) {
+       <div class="index-item-well">
+           <a class="index-item-game" href="@Url.Action("Index","Home",new { area="",id=item.GameID})" target="_blank">
+                <img src="@item.GameFace" width="300px" height="200px"/>
+                <span title="@item.GameName">@item.GameName</span>
+           </a>
+           <div class="index-game-bottom">
+               <a class="index-gbottom-item">
+                   <i class="fa fa-comment"></i>
+                   @item.GameCmtCount
+               </a>
+               <a class="index-gbottom-item">
+                   <i class="fa fa-map-signs"></i>
+                   @item.GameType.TypeName
+               </a>
+               <div class="index-gbottom-item">
+                   <i class="fa fa-calendar"></i>
+                   @item.GameTime.ToShortDateString()
+               </div>
+           </div>
+       </div>
+   }
+</div>
+

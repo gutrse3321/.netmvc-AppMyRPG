@@ -77,6 +77,7 @@
             Power By MyRPG&emsp;Coyright&nbsp;&copy;&nbsp;2017&emsp;All Rights Reserved
         </footer>
     </div>
+    <script src="~/Scripts/jquery.lazyload.min.js"></script>
     <script>
         $(function () {
             var navIndex = @ViewBag.NavIndex;
@@ -88,6 +89,12 @@
                 }, function () {
                     $("header").css("background-image", "url(../Images/titlebg/title_bg_" + navIndex + ".jpg)");
                 });
+            });
+        });
+        $(function () {
+            $("img.lazy").lazyload({
+                effect: "fadeIn",
+                threshold: 200
             });
         });
     </script>

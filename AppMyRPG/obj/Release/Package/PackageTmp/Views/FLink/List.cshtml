@@ -1,1 +1,8 @@
-这是预编译工具生成的标记文件，不应删除!
+﻿@model IEnumerable<AppMyRPG.Models.FriendLink>
+@{ Layout = null; }
+@foreach (var item in Model)
+{
+    <span class="friendlink-item">
+        @item.FLName：<a href="http://@item.FLUrl" target="_blank" title="@item.FLUrl">@item.FLUrl</a>
+    </span>
+}

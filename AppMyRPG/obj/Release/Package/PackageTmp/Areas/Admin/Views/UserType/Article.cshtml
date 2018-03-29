@@ -1,1 +1,47 @@
-这是预编译工具生成的标记文件，不应删除!
+﻿@model PagedList.IPagedList<AppMyRPG.Models.UserGroup>
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "用户类型";
+    ViewBag.NavIndex = 4;
+}
+<div class="article-top">
+    <div class="article-top-left">
+        @Html.ActionLink("添加类型", "Add")
+    </div>
+    <div class="article-top-right">
+        <div class="order-all">
+            <a class="downlist-btn">
+                排序
+                <i class="fa fa-sort-desc"></i>
+            </a>
+            <div class="downlist-well">
+                @Html.ActionLink("正序", "Article", new { order = 1 })
+                @Html.ActionLink("倒序", "Article", new { order = 2 })
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="article-panel">
+    @foreach (var item in Model)
+    {
+        <div class="type-well">
+            <div class="type-outin">
+                @Html.Label(item.GroupID.ToString())
+            </div>
+            <div class="usertype-name">
+                @item.GroupName
+            </div>
+            <div class="usertype-dec">
+                @item.GroupDec
+            </div>
+            <div class="type-operate">
+                <a class="game-operate" href="@Url.Action("Edit",new { groupid = item.GroupID})"><i class="fa fa-edit"></i>&nbsp;修改</a>
+                <a class="game-operate deleteBox" onclick="return confirm('是否删除');" href="@Url.Action("Delete",new { groupid=item.GroupID})"><i class="fa fa-trash"></i>&nbsp;删除</a>
+            </div>
+        </div>
+    }
+</div>
+<div class="myPage-well">
+    @Html.PagedListPager(Model, page => Url.Action("Article", new { page }))
+</div>

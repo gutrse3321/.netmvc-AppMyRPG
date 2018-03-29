@@ -1,1 +1,19 @@
-这是预编译工具生成的标记文件，不应删除!
+﻿@model IEnumerable<AppMyRPG.Models.Comment>
+@{ Layout = null; }
+@foreach (var item in Model) {
+    <div class="cmt-item">
+        <div class="cmt-item-face">
+            <a href="@Url.Action("Detail","UserInfo",new { UserID = item.UserID})" target="_blank">
+                <img class="lazy" data-original="@item.UserInfo.UserFace" title="@item.UserInfo.UserUID" />
+            </a>
+        </div>
+        <div class="cmt-item-timecont">
+            <div class="cmt-item-cont">
+                @item.CommentText
+            </div>
+            <div class="cmt-item-time">
+                @item.CommentTime.ToShortDateString()<a href="@Url.Action("Detail","Game",new { id=item.GameID})" title="@item.Games.GameName">@item.Games.GameName</a>
+            </div>
+        </div>
+    </div>
+}

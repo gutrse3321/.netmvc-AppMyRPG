@@ -1,1 +1,5 @@
-这是预编译工具生成的标记文件，不应删除!
+﻿@{ Layout = null;}
+<div class="userbox">
+    @Ajax.ActionLink("登陆","Login","UserInfo",null,new AjaxOptions { HttpMethod="get",UpdateTargetId = "getContent"})
+    @Html.ActionLink("注册","RegisterHolder","UserInfo")
+</div>

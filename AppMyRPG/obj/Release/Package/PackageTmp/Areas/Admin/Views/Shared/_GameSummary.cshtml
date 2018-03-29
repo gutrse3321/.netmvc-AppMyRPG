@@ -1,1 +1,31 @@
-这是预编译工具生成的标记文件，不应删除!
+﻿@model AppMyRPG.Models.Games
+<div class="article-game-well">
+    <div class="article-game-item">
+        <a class="article-game-face" href="#">
+            <img src="@Model.GameFace" />
+        </a>
+        <div class="article-game-content">
+            <div class="article-game-title">
+                <div>@Model.GameType.TypeName</div>
+                @Html.ActionLink(Model.GameName,"Detail","Game",new { id=Model.GameID,area=""},new { target = "_blank" })
+            </div>
+            <div class="article-game-time">
+                @Model.GameTime.ToString()
+            </div>
+            <div class="article-game-tar">
+                <span>
+                    <i class="fa fa-signal"></i>
+                    热度&nbsp;@Model.GameHot
+                </span>
+                <span>
+                    <i class="fa fa-comment"></i>
+                    评论数&nbsp;@Model.GameCmtCount
+                </span>
+            </div>
+            <div class="article-game-operate">
+                <a class="game-operate" href="@Url.Action("Edit",new { gameid = Model.GameID})"><i class="fa fa-edit"></i>&nbsp;修改</a>
+                <a class="game-operate deleteBox" onclick="return confirm('是否删除');" href="@Url.Action("Delete",new { gameid=Model.GameID})"><i class="fa fa-trash"></i>&nbsp;删除</a>
+            </div>
+        </div>
+    </div>
+</div>

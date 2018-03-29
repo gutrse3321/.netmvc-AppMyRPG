@@ -10,13 +10,13 @@
 </div>
 <div class="game-shot">
     <div class="shot-item">
-        <img src="@Model.GameImg1" />
+        <img class="lazy" data-original="@Model.GameImg1" />
     </div>
     <div class="shot-item">
-        <img src="@Model.GameImg2" />
+        <img class="lazy" data-original="@Model.GameImg2" />
     </div>
     <div class="shot-item">
-        <img src="@Model.GameImg3" />
+        <img class="lazy" data-original="@Model.GameImg3" />
     </div>
 </div>
 <div class="game-cont">
@@ -66,6 +66,7 @@
         </div>
     }
 }
+<script src="~/Scripts/jquery.lazyload.min.js"></script>
 <script>
     $(function () {
         var element = new Array();
@@ -74,6 +75,10 @@
             element[i] = $(this);
             temp = element[i].text().replace(/\n/g, '<br />');
             element[i].html(temp);
+        });
+        $("img.lazy").lazyload({
+            effect: "fadeIn",
+            threshold: 200
         });
     });
 </script>

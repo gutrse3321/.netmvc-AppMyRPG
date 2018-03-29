@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<preserve resultType="2" virtualPath="/Views/Cmt/List.cshtml" hash="ffffffffcf6b0aaf" filehash="ffffd3331f1044bf" flags="110000" assembly="App_Web_zntu2l1r" type="ASP._Page_Views_Cmt_List_cshtml">
-    <filedeps>
-        <filedep name="/Views/Cmt/List.cshtml" />
-    </filedeps>
-</preserve>

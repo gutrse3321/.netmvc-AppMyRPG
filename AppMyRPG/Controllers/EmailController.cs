@@ -39,7 +39,7 @@ namespace AppMyRPG.Controllers
 
                 StringBuilder strBody = new StringBuilder();
                 strBody.Append("点击链接激活账号，48小时有效，链接只能使用一次哦~成功激活，将给予进入里站的权限！<br/>");
-                strBody.AppendFormat("<a href='http://localhost/Email/ActivePage?userid={0}&vaildataCode={1}'>Click This</a><br/>", user.UserID, validataCode);
+                strBody.AppendFormat("<a href='http://game.tomonori.cc/Email/ActivePage?userid={0}&vaildataCode={1}'>Click This</a><br/>", user.UserID, validataCode);
                 mail.Body = strBody.ToString();
                 mail.IsBodyHtml = true;       //设置显示htmls
                 //设置邮件服务地址
@@ -96,7 +96,7 @@ namespace AppMyRPG.Controllers
 
             StringBuilder strBody = new StringBuilder();
             strBody.Append("找回你的密码，48小时有效，链接只能使用一次哦~<br/>");
-            strBody.AppendFormat("<a href='http://localhost/Email/NewPassword?useruid={0}&vaildataCode={1}'>Click This</a><br/>", uid, validataCode);
+            strBody.AppendFormat("<a href='http://game.tomonori.cc/Email/NewPassword?useruid={0}&vaildataCode={1}'>Click This</a><br/>", uid, validataCode);
             mail.Body = strBody.ToString();
             mail.IsBodyHtml = true;       //设置显示htmls
             //设置邮件服务地址

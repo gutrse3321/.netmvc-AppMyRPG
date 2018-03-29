@@ -29,13 +29,16 @@ My Old .NET MVC Project 以前做过的一个.NET MVC项目，个人全栈
 ```xml
 <!-- ./AppMyRPG/Web.config -->
 <connectionStrings>
-    <add name="DB_MyRPGEntities" 
-			  connectionString="Data Source=.;
-			  Initial Catalog=DB_MyRPGEntities;
- 			 user=sa;password=*******;
-			  MultipleActiveResultSets=True;
-			  App=EntityFramework" 
-			  providerName="System.Data.EntityClient" />
+    <!--<add name="DB_MyRPGEntities" connectionString="metadata=res://*/Models.DBModel.csdl|res://*/Models.DBModel.ssdl|res://*/Models.DBModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\DB_MyRPG.mdf;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />-->
+    <add name="DB_MyRPGEntities" connectionString="metadata=res://*/Models.DBModel.csdl|res://*/Models.DBModel.ssdl|res://*/Models.DBModel.msl;
+		provider=System.Data.SqlClient;
+		provider connection string=&quot;
+		data source=.;
+		Initial Catalog=DB_MyRPGEntities;
+		user=*****;password=******;
+		MultipleActiveResultSets=True;
+		App=EntityFramework&quot;" 
+		providerName="System.Data.EntityClient" />
 </connectionStrings>
 <entityFramework>
     <defaultConnectionFactory 

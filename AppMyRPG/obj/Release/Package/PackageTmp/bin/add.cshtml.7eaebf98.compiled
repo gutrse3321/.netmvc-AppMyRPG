@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<preserve resultType="2" virtualPath="/Areas/Admin/Views/GameType/Add.cshtml" hash="ffffffffcf4409f5" filehash="fffff99b6a2ac574" flags="110000" assembly="App_Web_uzhu5zgs" type="ASP._Page_Areas_Admin_Views_GameType_Add_cshtml">
-    <filedeps>
-        <filedep name="/Areas/Admin/Views/GameType/Add.cshtml" />
-    </filedeps>
-</preserve>

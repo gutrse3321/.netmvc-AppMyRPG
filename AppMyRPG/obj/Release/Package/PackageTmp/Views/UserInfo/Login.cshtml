@@ -1,1 +1,28 @@
-这是预编译工具生成的标记文件，不应删除!
+﻿@model AppMyRPG.Models.UserInfo
+@{ Layout = null;}
+@using (Html.BeginForm("LoginHolder", "UserInfo", FormMethod.Post))
+{
+    <div class="user-login">
+        <div class="user-form-group">
+            用户名&emsp;@Html.TextBoxFor(m=>m.UserUID,new { @class="user-textbox engNum",placeholder = "输入账号"})
+        </div>
+        <div class="user-form-group">
+            密&emsp;码&emsp;@Html.PasswordFor(m => m.UserPWD, new { @class = "user-textbox",placeholder="输入密码", maxlength = "18" })
+        </div>
+        <div class="user-form-forgot">
+            @Html.ActionLink("忘记密码了？", "ForgotPwd", "UserInfo")
+        </div>
+        <div class="user-form-group">
+            @Html.Submit("登陆","user-btn")@Ajax.ActionLink("注册", "RegisterHolder", "UserInfo",null,new AjaxOptions { HttpMethod = "get",UpdateTargetId="getContent"},new { @class= "user-btn" })
+        </div>
+    </div>
+}
+<script>
+    $(function () {
+        //禁止输入框输入中文和特殊符号
+        $(".engNum").keyup(function () {
+            var rep = /[\W]/g;
+            this.value = this.value.replace(rep, "");
+        });
+    });
+</script>

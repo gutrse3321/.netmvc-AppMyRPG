@@ -1,1 +1,105 @@
-这是预编译工具生成的标记文件，不应删除!
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 我的RPG资源站 - </title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/myRpg.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/myRpg.js"></script>
+</head>
+<body>
+    <div id="layg-panel">
+        <header>
+                <img src="~/Images/Admin/myrpgico.png"/>
+        </header>
+        <nav>
+            <a href="@Url.Action("Index", "Home")">最新更新</a>
+            <a href="@Url.Action("Hot", "Home")">热门排行</a>
+            <a href="@Url.Action("Ero", "Home")">里站</a>
+            <a href="@Url.Action("Notice", "Home")">公告</a>
+            @{
+                if ((string)Session["GID"] == "1" || (string)Session["GID"] == "6")
+                {
+                    @Html.ActionLink("后台中心", "Index", "Start", new { Area = "Admin" }, null);
+                }
+                else { }
+            }
+            <span class="bar"></span> 
+        </nav>
+        <div id="layg-main">
+            <div id="main-left">
+                @RenderBody()
+            </div>
+            <div id="main-right">
+                <div class="right-well">
+                    <div class="right-title">
+                        关于你的一切
+                        <span></span>
+                    </div>
+                    <div id="getContent" class="right-cont">
+                        @{
+                            if (Session["UID"] == null)
+                            {
+                                @Html.Action("Info", "UserInfo")
+                            }
+                            else {
+                                @Html.Action("LoggedIn", "UserInfo")
+                            }
+                        }
+                        
+                    </div>
+                </div>
+                <div class="right-well">
+                    <div class="right-title">
+                        My Link
+                        <span></span>
+                    </div>
+                    <div class="right-cont">
+                        @Html.Action("List", "FLink")
+                    </div>
+                </div>
+                <div class="right-well">
+                    <div class="right-title">
+                        ”友達、そうね”
+                        <span></span>
+                    </div>
+                    <div class="right-cont">
+                        @Html.Action("List","Cmt")
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            Power By MyRPG&emsp;Coyright&nbsp;&copy;&nbsp;2017&emsp;All Rights Reserved
+        </footer>
+    </div>
+    <script src="~/Scripts/jquery.lazyload.min.js"></script>
+    <script>
+        $(function () {
+            var navIndex = @ViewBag.NavIndex;
+            $(".bar").addClass("navchild_" + navIndex);
+            $("header").css("background-image", "url(../Images/titlebg/title_bg_" + navIndex + ".jpg)");
+            $("nav a").each(function (i) {
+                $(this).hover(function () {
+                    $("header").css("background-image", "url(../Images/titlebg/title_bg_" + i + ".jpg)");
+                }, function () {
+                    $("header").css("background-image", "url(../Images/titlebg/title_bg_" + navIndex + ".jpg)");
+                });
+            });
+        });
+        $(function () {
+            $("img.lazy").lazyload({
+                effect: "fadeIn",
+                threshold: 200
+            });
+        });
+    </script>
+    <div id="toTop">
+        <i class="fa fa-chevron-up"></i>
+    </div>
+</body>
+</html>

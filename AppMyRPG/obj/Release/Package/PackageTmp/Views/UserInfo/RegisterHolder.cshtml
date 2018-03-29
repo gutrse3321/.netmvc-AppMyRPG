@@ -1,1 +1,58 @@
-这是预编译工具生成的标记文件，不应删除!
+﻿@model AppMyRPG.Models.UserInfo
+@{
+    ViewBag.Title = "注册";
+    Layout = "~/Views/Shared/_HolderLayout.cshtml";
+    ViewBag.NavIndex = 5;
+}
+<div class="user-register">
+    @using (Html.BeginForm("RegisterHolder", "UserInfo", FormMethod.Post,new { enctype= "multipart/form-data" }))
+    {
+        <div class="user-reg-group">
+            <div class="reg-item">
+                用户名&emsp;@Html.TextBoxFor(m => m.UserUID, new { @class = "user-textbox engNum", placeholder = "输入账号" })
+            </div>
+            @Html.ValidationMessageFor(m=>m.UserUID,null,new { @class = "text-danger" })
+        </div>
+            <div class="user-reg-group">
+                <div class="reg-item">
+                    密&emsp;码&emsp;@Html.PasswordFor(m => m.UserPWD, new { @class = "user-textbox", placeholder = "输入密码", maxlength = "18" })
+                </div>
+                @Html.ValidationMessageFor(m=>m.UserPWD,null,new { @class = "text-danger" })
+            </div>
+            <div class="user-reg-group">
+                <div class="reg-item">
+                    验&emsp;证&emsp;<input type="password" id="pwd2" name="pwd2" class="user-textbox" placeholder="再次输入密码" maxlength="18" />
+                </div>
+            </div>
+            <div class="user-reg-group">
+                <div class="reg-item">
+                    邮&emsp;箱&emsp;@Html.TextBoxFor(m => m.UserEmail, new { @class = "user-textbox", placeholder = "输入正确邮箱" })<br />
+                </div>
+                @Html.ValidationMessageFor(m => m.UserEmail, null, new { @class = "text-danger" })
+            </div>
+            <div class="user-reg-group">
+                <div class="reg-item">
+                    添加头像
+                </div>
+                <div class="user-reg-face">
+                    <img class="user-face" src="~/Images/notdata.png" />
+                    <a class="user-file">添加头像</a>
+                    <input type="file" id="UserFace" class="userFace" name="UserFace" accept="image/png,image/jpeg" />
+                    <hr />
+                    <small>建议上传960*960高清头像</small>
+                </div>
+            </div>
+            <div class="user-reg-control">
+                @Html.Submit("注册", "user-btn reg-submit")@Html.ActionLink("登陆", "LoginHolder", "UserInfo", null, new { @class = "user-btn" })
+            </div>
+    }
+    <script>
+    $(function () {
+        //禁止输入框输入中文和特殊符号
+        $(".engNum").keyup(function () {
+            var rep = /[\W]/g;
+            this.value = this.value.replace(rep, "");
+        });
+    });
+    </script>
+</div>

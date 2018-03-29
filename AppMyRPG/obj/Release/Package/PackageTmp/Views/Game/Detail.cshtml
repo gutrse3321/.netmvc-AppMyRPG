@@ -1,1 +1,82 @@
-这是预编译工具生成的标记文件，不应删除!
+﻿@model AppMyRPG.Models.Games
+@{
+    ViewBag.Title = Model.GameName;
+    Layout = "~/Views/Shared/_HolderLayout.cshtml";
+}
+@Html.HiddenFor(m=>m.GameID)
+<div class="game-title">
+    <h2>@Model.GameName</h2>
+</div>
+<div class="game-shot">
+    <div class="shot-item">
+        <img class="lazy" data-original="@Model.GameImg1" />
+    </div>
+    <div class="shot-item">
+        <img class="lazy" data-original="@Model.GameImg2" />
+    </div>
+    <div class="shot-item">
+        <img class="lazy" data-original="@Model.GameImg3" />
+    </div>
+</div>
+<div class="game-cont">
+    <div class="cont-content">
+        <span class="cont-title">
+            游戏简介
+        </span>
+        <div class="cont-dec enterAsc">
+            @Model.GameDec
+        </div>
+    </div>
+    <div class="cont-content">
+        <span class="cont-title">
+            链接地址
+        </span>
+        <div class="cont-dec enterAsc">
+            百度&emsp;@Model.Link.LinkURL<br />
+            密码&emsp;@Model.Link.LinkPWD<br /><br />
+            <small>存在解压密码的话，请浏览公告置顶</small>
+        </div>
+    </div>
+</div>
+<span class="cont-title">
+    评论列表
+</span>
+<div id="game-cmt">
+    @Ajax.ActionLink("打开评论","Comment","Cmt", new { gameid = Model.GameID }, new AjaxOptions { HttpMethod = "get",UpdateTargetId = "game-cmt",LoadingElementId = "loading"})
+    <div id="loading">
+        <div id="loading-small"></div>
+    </div>
+</div>
+@{
+    if (Session["UID"] != null)
+    {
+        @Html.Action("Add", "Cmt", new { Model.GameID })
+    }
+    else {
+        <div class="game-userinfo">
+            <span>
+                你不能发表评论哦？
+            </span>
+            <div class="game-userinfo-box">
+                @Html.ActionLink("登陆", "LoginHolder", "UserInfo")
+                @Html.ActionLink("注册", "RegisterHolder", "UserInfo")
+            </div>
+        </div>
+    }
+}
+<script src="~/Scripts/jquery.lazyload.min.js"></script>
+<script>
+    $(function () {
+        var element = new Array();
+        var temp = null;
+        $(".enterAsc").each(function (i) {
+            element[i] = $(this);
+            temp = element[i].text().replace(/\n/g, '<br />');
+            element[i].html(temp);
+        });
+        $("img.lazy").lazyload({
+            effect: "fadeIn",
+            threshold: 200
+        });
+    });
+</script>

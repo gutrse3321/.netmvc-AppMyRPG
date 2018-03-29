@@ -1,1 +1,10 @@
-这是预编译工具生成的标记文件，不应删除!
+﻿@model IEnumerable<AppMyRPG.Models.Notice>
+<div class="index-bottom-item">
+    @foreach (var item in Model) {
+        <div class="index-item-well">
+            @Html.ActionLink(item.NoticeTitle,"List","Notice",new { id=item.NoticeID},new { @class="item-well-title"})
+            <hr />
+            @item.NoticeContent
+        </div>
+    }
+</div>

@@ -1,1 +1,31 @@
-这是预编译工具生成的标记文件，不应删除!
+﻿@model AppMyRPG.Models.FriendLink
+@{
+    ViewBag.Title = "添加链接";
+    ViewBag.NavIndex = 7;
+}
+<div class="type-control-panel">
+    <div class="type-control-well">
+        @using (Html.BeginForm(FormMethod.Post))
+        {
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(m => m.FLName, new { @class = "control-label" })
+                @Html.TextBoxFor(m => m.FLName, new { @class = "my-textbox type-textbox", maxlength = "10" })<br />
+                <span>@Html.ValidationMessageFor(m => m.FLName, "", new { @class = "text-danger" })</span>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.FLUrl, new { @class = "control-label" })
+                @Html.TextBoxFor(m => m.FLUrl, new { @class = "my-textbox type-textbox" })<br />
+                <span>@Html.ValidationMessageFor(m => m.FLUrl, "", new { @class = "text-danger" })</span>
+            </div>
+            <div class="game-submit-well">
+                @Html.Submit("添加", "game-submit utype-submit")
+                <a href="@Url.Action("Article","FriendLink")" class="btnNo">取消返回</a>
+            </div>
+        }
+    </div>
+    <div class="type-control-read">
+        1.注意输入正确地址<br />
+        2.输入框均不能为空哦
+    </div>
+</div>

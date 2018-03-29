@@ -4,7 +4,7 @@
     <div class="cmt-item">
         <div class="cmt-item-face">
             <a href="@Url.Action("Detail","UserInfo",new { UserID = item.UserID})" target="_blank">
-                <img src="@item.UserInfo.UserFace" title="@item.UserInfo.UserUID" />
+                <img class="lazy" data-original="@item.UserInfo.UserFace" title="@item.UserInfo.UserUID" />
             </a>
         </div>
         <div class="cmt-item-timecont">

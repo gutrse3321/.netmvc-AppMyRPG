@@ -16,91 +16,91 @@
       <publishTime>11/16/2017 12:35:22</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Comment/Article.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/FriendLink/Add.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/FriendLink/Article.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/FriendLink/Edit.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Game/Add.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Game/Article.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Game/Edit.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/GameType/Add.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/GameType/Article.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/GameType/Edit.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Notice/Add.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Notice/Article.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Notice/Edit.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Shared/_GameSummary.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Shared/_GameTypeSummary.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Shared/_Layout.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>03/28/2018 23:01:05</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Shared/_UserInfoSummary.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>03/28/2018 23:01:51</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Start/Game.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Start/Index.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Start/Notice.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Start/UserInfo.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/User/Add.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/User/Article.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/User/Edit.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/UserType/Add.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/UserType/Article.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/UserType/Edit.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/web.config">
-      <publishTime>09/01/2017 20:59:15</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Areas/Admin/Views/_ViewStart.cshtml">
-      <publishTime>11/16/2017 12:37:48</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="bin/add.cshtml.6340011a.compiled">
       <publishTime>11/16/2017 12:37:45</publishTime>
@@ -124,10 +124,10 @@
       <publishTime>11/16/2017 12:37:44</publishTime>
     </File>
     <File Include="bin/AppMyRPG.dll">
-      <publishTime>11/16/2017 12:37:30</publishTime>
+      <publishTime>03/28/2018 22:58:39</publishTime>
     </File>
     <File Include="bin/AppMyRPG.pdb">
-      <publishTime>11/16/2017 12:37:30</publishTime>
+      <publishTime>03/28/2018 22:58:39</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
       <publishTime>11/16/2017 12:37:41</publishTime>
@@ -457,10 +457,10 @@
       <publishTime>11/16/2017 12:37:44</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
-      <publishTime>01/04/2017 00:44:16</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/EntityFramework.SqlServer.dll">
-      <publishTime>01/04/2017 00:44:16</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/ero.cshtml.a8d08dba.compiled">
       <publishTime>11/16/2017 12:37:47</publishTime>
@@ -502,10 +502,10 @@
       <publishTime>11/16/2017 12:37:47</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
-      <publishTime>05/05/2017 09:59:26</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
-      <publishTime>01/05/2012 11:08:46</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/newpassword.cshtml.33603bb7.compiled">
       <publishTime>11/16/2017 12:37:46</publishTime>
@@ -517,10 +517,10 @@
       <publishTime>11/16/2017 12:37:45</publishTime>
     </File>
     <File Include="bin/PagedList.dll">
-      <publishTime>09/30/2013 17:36:38</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/PagedList.Mvc.dll">
-      <publishTime>09/30/2013 18:15:20</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/pwdedit.cshtml.563ce230.compiled">
       <publishTime>11/16/2017 12:37:47</publishTime>
@@ -529,103 +529,103 @@
       <publishTime>11/16/2017 12:37:47</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe.config">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/csc.rsp">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/csi.exe">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/csi.rsp">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/System.AppContext.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/System.Collections.Immutable.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.FileSystem.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/System.Reflection.Metadata.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/vbc.exe">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/vbc.exe.config">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/vbc.rsp">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/VBCSCompiler.exe">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/roslyn/VBCSCompiler.exe.config">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/sendsuccess.cshtml.33603bb7.compiled">
       <publishTime>11/16/2017 12:37:46</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
-      <publishTime>01/28/2015 04:04:30</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/System.Web.Mvc.dll">
-      <publishTime>01/28/2015 04:02:18</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
-      <publishTime>01/28/2015 04:02:32</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/System.Web.Webpages.Deployment.dll">
-      <publishTime>01/28/2015 04:04:30</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/System.Web.Webpages.dll">
-      <publishTime>01/28/2015 04:04:30</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/System.Web.Webpages.Razor.dll">
-      <publishTime>01/28/2015 04:04:30</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/usercmt.cshtml.a496743e.compiled">
       <publishTime>11/16/2017 12:37:46</publishTime>
@@ -634,28 +634,28 @@
       <publishTime>11/16/2017 12:37:45</publishTime>
     </File>
     <File Include="bin/zh-Hans/EntityFramework.resources.dll">
-      <publishTime>03/02/2015 09:32:38</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/zh-Hans/EntityFramework.SqlServer.resources.dll">
-      <publishTime>03/02/2015 09:32:38</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/zh-Hans/System.Web.Helpers.resources.dll">
-      <publishTime>01/28/2015 04:04:32</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/zh-Hans/System.Web.Mvc.resources.dll">
-      <publishTime>01/28/2015 04:02:22</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/zh-Hans/System.Web.Razor.resources.dll">
-      <publishTime>01/28/2015 04:02:34</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/zh-Hans/System.Web.Webpages.Deployment.resources.dll">
-      <publishTime>01/28/2015 04:04:32</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/zh-Hans/System.Web.Webpages.Razor.resources.dll">
-      <publishTime>01/28/2015 04:04:32</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/zh-Hans/System.Web.Webpages.resources.dll">
-      <publishTime>01/28/2015 04:04:32</publishTime>
+      <publishTime>02/05/2018 12:56:22</publishTime>
     </File>
     <File Include="bin/_gamesummary.cshtml.e5e45fcf.compiled">
       <publishTime>11/16/2017 12:37:44</publishTime>
@@ -682,253 +682,259 @@
       <publishTime>11/16/2017 12:37:45</publishTime>
     </File>
     <File Include="Content/admin.css">
-      <publishTime>10/01/2017 13:28:19</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Content/bootstrap.min.css">
-      <publishTime>09/05/2017 22:29:24</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Content/font-awesome.min.css">
-      <publishTime>09/05/2017 23:01:49</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Content/myRpg.css">
-      <publishTime>10/09/2017 15:27:05</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Content/PagedList.css">
-      <publishTime>09/19/2017 11:38:15</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="fonts/fontawesome-webfont.eot">
-      <publishTime>09/05/2017 23:01:49</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="fonts/fontawesome-webfont.svg">
-      <publishTime>09/05/2017 23:01:49</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="fonts/fontawesome-webfont.ttf">
-      <publishTime>09/05/2017 23:01:49</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="fonts/fontawesome-webfont.woff">
-      <publishTime>09/05/2017 23:01:49</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="fonts/fontawesome-webfont.woff2">
-      <publishTime>09/05/2017 23:01:49</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="fonts/FontAwesome.otf">
-      <publishTime>09/05/2017 23:01:49</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
-      <publishTime>09/01/2017 20:57:40</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.svg">
-      <publishTime>09/01/2017 20:57:40</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.ttf">
-      <publishTime>09/01/2017 20:57:40</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.woff">
-      <publishTime>09/01/2017 20:57:40</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.woff2">
-      <publishTime>09/01/2017 20:57:40</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/Admin/myrpgico.png">
-      <publishTime>09/05/2017 23:08:00</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/bg/Main_bg.png">
-      <publishTime>09/27/2017 20:15:15</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/face/Game/1.jpg">
-      <publishTime>09/13/2017 16:24:07</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/face/Game/chuyue.png">
-      <publishTime>09/13/2017 16:33:07</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/face/Game/gameface_30fb2cf2912f45a3a7ded5bc53a891e6.jpg">
-      <publishTime>09/15/2017 16:58:39</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/face/Game/gameface_74249798243d431a8f0dfa6e73f87dd0.jpg">
-      <publishTime>09/15/2017 15:01:29</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/face/Game/gameface_c83b150893574d39939e09722b179d26.jpg">
-      <publishTime>09/18/2017 17:01:25</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/face/Game/gameface_e322b276a6444fb4973b1b324d443ff2.jpg">
-      <publishTime>09/19/2017 10:58:53</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/face/Game/gamersky_01small_02.jpg">
-      <publishTime>09/06/2017 14:24:56</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/face/User/IMG_0891.JPG">
-      <publishTime>09/22/2017 10:39:16</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/face/User/user_5de2ab03b409403cab90456e1065b6fa.jpg">
-      <publishTime>10/05/2017 20:27:12</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/face/User/user_8c386271e4304ecfa24d5da253141106.jpg">
-      <publishTime>09/27/2017 14:07:55</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/Games/gamersky_02small_o6.jpg">
-      <publishTime>09/15/2017 15:29:20</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/Games/gamersky_03small_o6.jpg">
-      <publishTime>09/15/2017 15:29:20</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/Games/screenshot2e490537c6a542ac843dd8f393050ae1_2.jpg">
-      <publishTime>09/18/2017 17:01:25</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/Games/screenshot35403aeed67749db82d14e6d4aaee6e8_2.jpg">
-      <publishTime>09/19/2017 10:58:53</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/Games/screenshot5c66f19779624975af0d09f3694bff6f_3.jpg">
-      <publishTime>09/18/2017 17:01:25</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/Games/screenshot67a633d8b3d242dcbe4903d2d11d25bf_1.jpg">
-      <publishTime>09/15/2017 15:42:42</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/Games/screenshot8af5ba64a0be413aaeca22ee0cc9a094_1.jpg">
-      <publishTime>09/18/2017 17:01:25</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/Games/screenshot92d6f59f757b47e7b5c18334b5df87e9_1.jpg">
-      <publishTime>09/19/2017 10:58:53</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/Games/screenshotaeb956868dd54a81a8f9913d3f37736e_3.jpg">
-      <publishTime>09/15/2017 15:01:29</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/Games/screenshotd8fe4959c26c4ee3ab4fb0a54472de20_2.jpg">
-      <publishTime>09/15/2017 15:01:29</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/Games/screenshote52749a8148c45398c383d46e876b2b4_3.jpg">
-      <publishTime>09/19/2017 10:58:53</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/notdata.png">
-      <publishTime>09/14/2017 23:15:10</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/titlebg/title_bg_0.jpg">
-      <publishTime>09/27/2017 20:14:31</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/titlebg/title_bg_1.jpg">
-      <publishTime>09/27/2017 20:14:31</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/titlebg/title_bg_2.jpg">
-      <publishTime>09/27/2017 20:14:31</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/titlebg/title_bg_3.jpg">
-      <publishTime>09/27/2017 20:14:31</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/titlebg/title_bg_4.jpg">
-      <publishTime>09/30/2017 15:47:15</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/titlebg/title_bg_5.jpg">
-      <publishTime>10/07/2017 13:07:07</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/titlebg/title_bg_6.jpg">
-      <publishTime>10/07/2017 13:11:46</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Images/titlebg/title_bg_7.jpg">
-      <publishTime>10/07/2017 13:52:32</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Models/DBModel.edmx.diagram">
-      <publishTime>11/16/2017 11:05:47</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="myrpgico.ico">
-      <publishTime>10/09/2017 15:30:37</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
       <publishTime>11/16/2017 12:37:33</publishTime>
     </File>
     <File Include="Scripts/admin.js">
-      <publishTime>09/25/2017 16:17:25</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Scripts/bootstrap.min.js">
-      <publishTime>09/01/2017 20:57:40</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.min.js">
-      <publishTime>09/05/2017 22:59:28</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery.lazyload.min.js">
+      <publishTime>03/28/2018 17:57:21</publishTime>
     </File>
     <File Include="Scripts/jquery.unobtrusive-ajax.min.js">
-      <publishTime>09/20/2017 19:49:15</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Scripts/myRpg.js">
-      <publishTime>10/07/2017 12:34:00</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Views/Cmt/Add.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Views/Cmt/Comment.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>03/28/2018 22:49:18</publishTime>
     </File>
     <File Include="Views/Cmt/List.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>03/28/2018 22:44:19</publishTime>
     </File>
     <File Include="Views/Cmt/UserCmt.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Views/Email/NewPassword.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Views/Email/SendSuccess.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Views/FLink/List.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Views/Game/Detail.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>03/28/2018 18:02:02</publishTime>
     </File>
     <File Include="Views/Game/EroDetail.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>03/28/2018 22:38:51</publishTime>
     </File>
     <File Include="Views/Home/Ero.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>03/28/2018 22:50:27</publishTime>
     </File>
     <File Include="Views/Home/Hot.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>03/28/2018 22:50:09</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>03/28/2018 22:49:52</publishTime>
     </File>
     <File Include="Views/Home/Notice.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Views/Shared/_HolderLayout.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>03/28/2018 23:01:31</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>03/28/2018 22:44:57</publishTime>
     </File>
     <File Include="Views/UserInfo/Detail.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Views/UserInfo/Edit.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Views/UserInfo/ForgotPwd.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Views/UserInfo/Info.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Views/UserInfo/LoggedIn.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Views/UserInfo/Login.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Views/UserInfo/LoginHolder.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Views/UserInfo/PwdEdit.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Views/UserInfo/RegisterHolder.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Views/web.config">
-      <publishTime>09/01/2017 20:52:15</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
-      <publishTime>11/16/2017 12:37:51</publishTime>
+      <publishTime>02/05/2018 12:56:19</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/09/2017 15:38:55</publishTime>
+      <publishTime>03/28/2018 22:58:41</publishTime>
     </File>
   </ItemGroup>
 </Project>

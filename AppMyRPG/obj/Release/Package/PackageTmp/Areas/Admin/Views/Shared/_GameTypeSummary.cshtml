@@ -1,1 +1,13 @@
-这是预编译工具生成的标记文件，不应删除!
+﻿@model AppMyRPG.Models.GameType
+<div class="type-well">
+    <div class="type-outin">
+        @Html.Label(Model.OIID==2?"表":"里",new { @class=Model.OIID==2? "my-success": "my-down" })
+    </div>
+    <div class="type-name">
+        @Model.TypeName
+    </div>
+    <div class="type-operate">
+        <a class="game-operate" href="@Url.Action("Edit",new { typeid = Model.TypeID})"><i class="fa fa-edit"></i>&nbsp;修改</a>
+        <a class="game-operate deleteBox" onclick="return confirm('是否删除');" href="@Url.Action("Delete",new { typeid=Model.TypeID})"><i class="fa fa-trash"></i>&nbsp;删除</a>
+    </div>
+</div>
