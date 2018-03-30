@@ -28,7 +28,7 @@ namespace AppMyRPG.Controllers
                 string validataCode = Guid.NewGuid().ToString();
 
                 //填写邮件地址和显示名称
-                MailAddress from = new MailAddress("gutrse3321@live.com","MyRPG站长");
+                MailAddress from = new MailAddress("Your email","MyRPG站长");
                 //填写收件人地址和名称
                 MailAddress to = new MailAddress(user.UserEmail);
 
@@ -50,8 +50,8 @@ namespace AppMyRPG.Controllers
                         //填写服务器地址相关的用户名和密码
                         var credential = new NetworkCredential
                         {
-                            UserName = "gutrse3321@live.com",
-                            Password = "123357789zzs"
+                            UserName = "Your EMail",
+                            Password = "Your Password"
                         };
                         smtp.Credentials = credential;
                         smtp.Host = "smtp-mail.outlook.com";
